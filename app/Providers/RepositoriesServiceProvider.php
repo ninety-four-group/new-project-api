@@ -17,6 +17,11 @@ class RepositoriesServiceProvider extends ServiceProvider
             'App\Contracts\AdminInterface',
             'App\Repositories\AdminRepository',
         );
+
+        $this->app->bind(
+            'App\Contracts\UserInterface',
+            'App\Repositories\UserRepository',
+        );
     }
 
     /**

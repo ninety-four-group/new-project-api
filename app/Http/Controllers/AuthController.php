@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Contracts\UserInterface;
 use App\Models\User;
 use Illuminate\Http\Request;
 use App\Traits\HttpResponses;
@@ -14,6 +15,12 @@ class AuthController extends Controller
 {
     use HttpResponses;
 
+
+    protected $user;
+
+    public function __construct(UserInterface $interface){
+        $this->user = $interface;
+    }
 
     public function login(LoginUserRequest $request)
     {
@@ -35,12 +42,7 @@ class AuthController extends Controller
     {
         $request->validated($request->all());
 
-        $user = User::create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'password' => Hash::make($request->password)
-        ]);
-
+        $user = $this->user->store($request->all());
 
         return $this->success([
             'user' => $user,
