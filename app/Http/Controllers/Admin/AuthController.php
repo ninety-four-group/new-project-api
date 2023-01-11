@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Contracts\AdminInterface;
 use Illuminate\Http\Request;
 use App\Traits\HttpResponses;
 use App\Http\Controllers\Controller;
@@ -14,6 +15,12 @@ use Illuminate\Support\Facades\Hash;
 class AuthController extends Controller
 {
     use HttpResponses;
+
+    protected $admin;
+
+    public function __construct(AdminInterface $interface){
+        $this->admin = $interface;
+    }
 
     public function login(LoginAdminRequest $request)
     {
@@ -35,11 +42,7 @@ class AuthController extends Controller
     {
         $request->validated($request->all());
 
-        $admin = Admin::create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'password' => Hash::make($request->password)
-        ]);
+        $admin = $this->admin->store($request->all());
 
         return $this->success([
             'user' => $admin,

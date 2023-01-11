@@ -14,6 +14,7 @@ class AuthController extends Controller
 {
     use HttpResponses;
 
+
     public function login(LoginUserRequest $request)
     {
         $request->validated($request->all());
@@ -39,6 +40,7 @@ class AuthController extends Controller
             'email' => $request->email,
             'password' => Hash::make($request->password)
         ]);
+
 
         return $this->success([
             'user' => $user,
