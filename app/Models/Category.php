@@ -2,8 +2,10 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Database\Eloquent\Casts\Attribute;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Category extends Model
 {
@@ -15,6 +17,14 @@ class Category extends Model
         'parent_id',
     ];
 
+    protected function image(): Attribute
+    {
+        return Attribute::make(
+            get: fn ($value) => Storage::disk('public')->url($value),
+        );
+    }
+
+
     public function subcategory()
     {
         return $this->hasMany(Category::class, 'parent_id');
@@ -24,6 +34,7 @@ class Category extends Model
     {
         return $this->belongsTo(Category::class, 'parent_id');
     }
+
 
 
 }
