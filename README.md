@@ -10,7 +10,7 @@ Laravel API with Sanctum Authentication and Repository Pattern
 Install Packages
 
 ```bash
-composer Install
+composer install
 ```
 
 Database Migration
