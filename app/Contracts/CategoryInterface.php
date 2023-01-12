@@ -2,9 +2,12 @@
 
 namespace App\Contracts;
 
+use Illuminate\Http\Request;
+
+
 interface CategoryInterface
 {
-   public function all();
+   public function all(Request $request);
 
    public function get($id);
 
