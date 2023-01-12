@@ -4,6 +4,7 @@ namespace App\Repositories;
 
 use App\Contracts\AdminInterface;
 use App\Models\Admin;
+use Illuminate\Support\Facades\Hash;
 
 class AdminRepository implements AdminInterface
 {
@@ -17,7 +18,11 @@ class AdminRepository implements AdminInterface
 
     public function store(array $data)
     {
-        return Admin::create($data);
+        return Admin::create([
+            'name' => $data['name'],
+            'email' => $data['email'],
+            'password' => Hash::make($data['password']),
+        ]);
     }
 
     public function update($id, array $data)

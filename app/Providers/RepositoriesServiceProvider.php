@@ -22,6 +22,11 @@ class RepositoriesServiceProvider extends ServiceProvider
             'App\Contracts\UserInterface',
             'App\Repositories\UserRepository',
         );
+
+        $this->app->bind(
+            'App\Contracts\CategoryInterface',
+            'App\Repositories\CategoryRepository',
+        );
     }
 
     /**
