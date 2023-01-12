@@ -13,12 +13,21 @@ class CategoryRepository implements CategoryInterface
 {
     public function all(Request $request)
     {
+        $search = $request->query('search');
         $limit = $request->query('limit',10);
+
         $query = Category::query();
-        $query->where('parent_id',null);
+
+        if($search){
+            $query->where('name','LIKE',"%{$search}%");
+            $query->where('mm_name','LIKE',"%{$search}%");
+        }
+
         $query->with('subcategory');
         $query->with('subcategory.subcategory');
-        $categories = $query->paginate($limit);
+
+        $categories = $query->simplePaginate($limit);
+
         return CategoryResource::collection($categories)->response()->getData();
     }
 
