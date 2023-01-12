@@ -28,10 +28,10 @@ class CategoryController extends Controller
     public function index(Request $request)
     {
         $categories = $this->category->all();
-        return $categories;
+        return $this->success($categories,'Category List');
     }
 
- 
+
     /**
      * Store a newly created resource in storage.
      *

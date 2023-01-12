@@ -11,6 +11,10 @@ class Category extends Model
 
     protected $fillable = ['name','mm_name','slug','parent_id','image'];
 
+    protected $hidden = [
+        'parent_id',
+    ];
+
     public function subcategory()
     {
         return $this->hasMany(Category::class, 'parent_id');
@@ -20,4 +24,6 @@ class Category extends Model
     {
         return $this->belongsTo(Category::class, 'parent_id');
     }
+
+
 }
