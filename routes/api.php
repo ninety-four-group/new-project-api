@@ -12,6 +12,8 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CouponController;
 use App\Http\Controllers\InstallationController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\ProjectCalculatorController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\WishlistController;
 
 Route::post('login', [AuthController::class,'login']);
@@ -57,7 +59,16 @@ Route::get('diy', [DIYController::class,'getDIY']);
 Route::get('diy/{id}', [DIYController::class,'getDIYDetail']);
 
 
+Route::get('project-calculator/category',[ProjectCalculatorController::class , 'getCategories']);
+Route::get('project-calculator/type',[ProjectCalculatorController::class , 'getProductType']);
+Route::post('project-calculator/calculate',[ProjectCalculatorController::class , 'calculateProject']);
+
 Route::middleware(['auth:sanctum', 'abilities:user'])->group(function () {
     Route::get('me', [AuthController::class,'getMe']);
     Route::post('logout', [AuthController::class,'logout']);
+
+
+    Route::get('profile',[UserController::class,'getProfile']);
+    Route::put('profile',[UserController::class,'updateProfile']);
+
 });
