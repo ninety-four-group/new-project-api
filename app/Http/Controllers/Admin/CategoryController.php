@@ -8,6 +8,9 @@ use App\Traits\HttpResponses;
 use App\Contracts\CategoryInterface;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreCategoryRequest;
+use App\Http\Requests\UpdateCategoryRequest;
+use App\Models\Category;
+use Illuminate\Support\Facades\Storage;
 
 class CategoryController extends Controller
 {
@@ -27,11 +30,11 @@ class CategoryController extends Controller
      */
     public function index(Request $request)
     {
-        $categories = $this->category->all();
-        return $categories;
+        $categories = $this->category->all($request);
+        return $this->success($categories,'Category List');
     }
 
- 
+
     /**
      * Store a newly created resource in storage.
      *
@@ -65,19 +68,10 @@ class CategoryController extends Controller
      */
     public function show($id)
     {
-        //
+        $category = $this->category->get($id);
+        return $this->success($category,'Category Detail');
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
 
     /**
      * Update the specified resource in storage.
@@ -86,9 +80,35 @@ class CategoryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UpdateCategoryRequest $request, $id)
     {
-        //
+
+        $category = Category::find($id);
+
+        if(!$category){
+            return $this->error(null,'Category not found',404);
+        }
+
+        $data = [
+            'name' => $request->name ?? $category->name,
+            'mm_name' => $request->mm_name ?? $category->mm_name,
+            'slug' => $request->name ? Str::slug($request->name) : $category->slug,
+            'parent_id' => $request->parent_id ?? $category->parent_id,
+        ];
+
+        if($request->hasFile('image')){
+
+            if($category->image){
+                Storage::disk('public')->delete($category->image);
+            }
+
+            $data['image'] = $request->file('image')->store('category', 'public');
+        }
+
+
+        $update = $this->category->update($id, $data);
+
+        return $this->success($update,'Successfully updated');
     }
 
     /**
@@ -99,6 +119,17 @@ class CategoryController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $category = Category::find($id);
+
+        if(!$category){
+            return $this->error(null,'Category not found',404);
+        }
+
+        if($category->image){
+            Storage::delete($category->image);
+        }
+
+        $category->delete();
+        return $this->success(null,'Successfully delete');
     }
 }
