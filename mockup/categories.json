@@ -1,0 +1,185 @@
+[
+    {
+        "id": 2,
+        "name": "Paint & Chemical",
+        "mm_name": "Paint & Chemical",
+        "slug": "paint-chemical",
+        "image": "http://localhost/storage/category/kDMU7Kwcb2rV0X4pQCSNmxBn6XtUBkI5StlLTtcW.jpg",
+        "created_at": "2023-01-12T10:10:37.000000Z",
+        "updated_at": "2023-01-12T10:10:37.000000Z",
+        "highlight_flag": null,
+        "deleted_at": null,
+        "subcategory": [
+            {
+                "id": 4,
+                "name": "Chemical",
+                "mm_name": "Chemical",
+                "slug": "chemical",
+                "image": "http://localhost/storage/category/U8bZ0DCGpXdvg9acNDfD6Vtk9Thn4na7GDsW7dsh.jpg",
+                "created_at": "2023-01-12T10:11:27.000000Z",
+                "updated_at": "2023-01-12T10:11:27.000000Z",
+                "highlight_flag": null,
+                "deleted_at": null,
+                "subcategory": [
+                    {
+                        "id": 10,
+                        "name": "Sealer",
+                        "mm_name": "Sealer",
+                        "slug": "sealer",
+                        "image": "http://localhost/storage/",
+                        "created_at": "2023-01-25T03:55:33.000000Z",
+                        "updated_at": "2023-01-25T03:55:33.000000Z",
+                        "highlight_flag": null,
+                        "deleted_at": null
+                    }
+                ]
+            },
+            {
+                "id": 8,
+                "name": "Cement WaterProofing Compound",
+                "mm_name": "Cement WaterProofing Compound",
+                "slug": "cement-waterproofing-compound",
+                "image": "http://localhost/storage/category/yUq0Npl93xqZmq5jOJLUbWKvBfjzw38uKTVpljnK.jpg",
+                "created_at": "2023-01-12T10:12:47.000000Z",
+                "updated_at": "2023-01-12T10:12:47.000000Z",
+                "highlight_flag": null,
+                "deleted_at": null,
+                "subcategory": []
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Tools & Hardware",
+        "mm_name": "Tools & Hardware",
+        "slug": "tools-hardware",
+        "image": "http://localhost/storage/category/LBGzfXePt3cL8o22rCXHAX23rNqcoqmMbn3XOtUL.jpg",
+        "created_at": "2023-01-12T10:10:55.000000Z",
+        "updated_at": "2023-01-12T10:10:55.000000Z",
+        "highlight_flag": null,
+        "deleted_at": null,
+        "subcategory": [
+            {
+                "id": 5,
+                "name": "Power Tools",
+                "mm_name": "Power Tools",
+                "slug": "power-tools",
+                "image": "http://localhost/storage/category/rPcZN3DSflBaG3f9p2SoYJCz5bCu5poLsUXgKJli.jpg",
+                "created_at": "2023-01-12T10:11:54.000000Z",
+                "updated_at": "2023-01-12T10:11:54.000000Z",
+                "highlight_flag": null,
+                "deleted_at": null,
+                "subcategory": []
+            },
+            {
+                "id": 6,
+                "name": "Power Tools Accessories",
+                "mm_name": "Power Tools Accessories",
+                "slug": "power-tools-accessories",
+                "image": "http://localhost/storage/category/Ga5OxAwfaEKk1446of4fhs8CbQxEnqarUKiJu0O1.jpg",
+                "created_at": "2023-01-12T10:12:10.000000Z",
+                "updated_at": "2023-01-12T10:12:10.000000Z",
+                "highlight_flag": null,
+                "deleted_at": null,
+                "subcategory": []
+            },
+            {
+                "id": 7,
+                "name": "Hand Tools",
+                "mm_name": "Hand Tools",
+                "slug": "hand-tools",
+                "image": "http://localhost/storage/category/R2EogwcaaLhpgtzzmDgdZ914KgTTixldplBdDT8X.jpg",
+                "created_at": "2023-01-12T10:12:22.000000Z",
+                "updated_at": "2023-01-12T10:12:22.000000Z",
+                "highlight_flag": null,
+                "deleted_at": null,
+                "subcategory": []
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Chemical",
+        "mm_name": "Chemical",
+        "slug": "chemical",
+        "image": "http://localhost/storage/category/U8bZ0DCGpXdvg9acNDfD6Vtk9Thn4na7GDsW7dsh.jpg",
+        "created_at": "2023-01-12T10:11:27.000000Z",
+        "updated_at": "2023-01-12T10:11:27.000000Z",
+        "highlight_flag": null,
+        "deleted_at": null,
+        "subcategory": [
+            {
+                "id": 10,
+                "name": "Sealer",
+                "mm_name": "Sealer",
+                "slug": "sealer",
+                "image": "http://localhost/storage/",
+                "created_at": "2023-01-25T03:55:33.000000Z",
+                "updated_at": "2023-01-25T03:55:33.000000Z",
+                "highlight_flag": null,
+                "deleted_at": null,
+                "subcategory": []
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Power Tools",
+        "mm_name": "Power Tools",
+        "slug": "power-tools",
+        "image": "http://localhost/storage/category/rPcZN3DSflBaG3f9p2SoYJCz5bCu5poLsUXgKJli.jpg",
+        "created_at": "2023-01-12T10:11:54.000000Z",
+        "updated_at": "2023-01-12T10:11:54.000000Z",
+        "highlight_flag": null,
+        "deleted_at": null,
+        "subcategory": []
+    },
+    {
+        "id": 6,
+        "name": "Power Tools Accessories",
+        "mm_name": "Power Tools Accessories",
+        "slug": "power-tools-accessories",
+        "image": "http://localhost/storage/category/Ga5OxAwfaEKk1446of4fhs8CbQxEnqarUKiJu0O1.jpg",
+        "created_at": "2023-01-12T10:12:10.000000Z",
+        "updated_at": "2023-01-12T10:12:10.000000Z",
+        "highlight_flag": null,
+        "deleted_at": null,
+        "subcategory": []
+    },
+    {
+        "id": 7,
+        "name": "Hand Tools",
+        "mm_name": "Hand Tools",
+        "slug": "hand-tools",
+        "image": "http://localhost/storage/category/R2EogwcaaLhpgtzzmDgdZ914KgTTixldplBdDT8X.jpg",
+        "created_at": "2023-01-12T10:12:22.000000Z",
+        "updated_at": "2023-01-12T10:12:22.000000Z",
+        "highlight_flag": null,
+        "deleted_at": null,
+        "subcategory": []
+    },
+    {
+        "id": 8,
+        "name": "Cement WaterProofing Compound",
+        "mm_name": "Cement WaterProofing Compound",
+        "slug": "cement-waterproofing-compound",
+        "image": "http://localhost/storage/category/yUq0Npl93xqZmq5jOJLUbWKvBfjzw38uKTVpljnK.jpg",
+        "created_at": "2023-01-12T10:12:47.000000Z",
+        "updated_at": "2023-01-12T10:12:47.000000Z",
+        "highlight_flag": null,
+        "deleted_at": null,
+        "subcategory": []
+    },
+    {
+        "id": 10,
+        "name": "Sealer",
+        "mm_name": "Sealer",
+        "slug": "sealer",
+        "image": "http://localhost/storage/",
+        "created_at": "2023-01-25T03:55:33.000000Z",
+        "updated_at": "2023-01-25T03:55:33.000000Z",
+        "highlight_flag": null,
+        "deleted_at": null,
+        "subcategory": []
+    }
+]

@@ -63,6 +63,9 @@ class CategoryRepository implements CategoryInterface
 
     public function delete($id)
     {
+    }
 
+    public function getList(Request $request)
+    {
     }
 }

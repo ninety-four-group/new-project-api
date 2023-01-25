@@ -4,7 +4,7 @@ namespace App\Contracts;
 
 use Illuminate\Http\Request;
 
-interface CategoryInterface
+interface WarehouseInterface
 {
     public function all(Request $request);
 
@@ -15,6 +15,4 @@ interface CategoryInterface
     public function update($id, array $data);
 
     public function delete($id);
-
-    public function getList(Request $request);
 }
