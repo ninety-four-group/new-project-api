@@ -27,9 +27,7 @@ class BrandRepository implements BrandInterface
 
     public function get($id)
     {
-        $query = Brand::where('id', $id);
-
-        $brand = $query->get();
+        $brand = Brand::whereId($id)->first();
         return new BrandResource($brand);
     }
 

@@ -29,10 +29,14 @@ class WarehouseRepository implements WarehouseInterface
 
     public function get($id)
     {
-        $query = Warehouse::where('id', $id);
+        $warehouse = Warehouse::find($id);
 
-        $warehouse = $query->get();
+        if(!$warehouse){
+            return null;
+        }
+
         return new WarehouseResource($warehouse);
+
     }
 
     public function store(array $data)

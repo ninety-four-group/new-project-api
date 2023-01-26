@@ -4,16 +4,19 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DIYController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\BrandController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CouponController;
+use App\Http\Controllers\GeneralController;
 use App\Http\Controllers\InstallationController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProjectCalculatorController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\WarehouseController;
 use App\Http\Controllers\WishlistController;
 
 Route::post('login', [AuthController::class,'login']);
@@ -22,7 +25,16 @@ Route::post('register', [AuthController::class,'register']);
 Route::get('home', [HomeController::class,'getHomeData']);
 
 Route::get('categories', [CategoryController::class,'getCategories']);
+Route::get('brands', [BrandController::class,'getBrands']);
+Route::get('warehouses', [WarehouseController::class,'getWarehouses']);
+
 Route::get('products', [ProductController::class,'getProductList']);
+
+Route::get('countries',[GeneralController::class,'getCountries']);
+Route::get('regions/{country_id}',[GeneralController::class,'getRegions']);
+Route::get('cities/{region_id}',[GeneralController::class,'getCities']);
+Route::get('townships/{city_id}',[GeneralController::class,'getTownships']);
+
 Route::get('products/{id}', [ProductController::class,'getProductDetail']);
 Route::post('reviews', [ReviewController::class,'giveReview']);
 
@@ -66,7 +78,6 @@ Route::post('project-calculator/calculate',[ProjectCalculatorController::class ,
 Route::middleware(['auth:sanctum', 'abilities:user'])->group(function () {
     Route::get('me', [AuthController::class,'getMe']);
     Route::post('logout', [AuthController::class,'logout']);
-
 
     Route::get('profile',[UserController::class,'getProfile']);
     Route::put('profile',[UserController::class,'updateProfile']);

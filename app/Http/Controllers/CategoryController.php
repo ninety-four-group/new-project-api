@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Traits\HttpResponses;
 use App\Contracts\CategoryInterface;
+use App\Models\Category;
 
 class CategoryController extends Controller
 {
@@ -19,7 +20,7 @@ class CategoryController extends Controller
 
     public function getCategories(Request $request)
     {
-        $categories = json_decode(file_get_contents(base_path("/mockup/categories.json")), null, 512, JSON_THROW_ON_ERROR);
+        $categories = Category::all();
         return $this->success($categories, 'Category List');
     }
 }

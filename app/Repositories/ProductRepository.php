@@ -5,11 +5,10 @@ namespace App\Repositories;
 use App\Models\Category;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
-use App\Contracts\CategoryInterface;
+use App\Contracts\ProductInterface;
 use App\Http\Resources\CategoryResource;
-use App\Http\Resources\CategoryCollection;
 
-class CategoryRepository implements CategoryInterface
+class ProductRepository implements ProductInterface
 {
     public function all(Request $request)
     {
