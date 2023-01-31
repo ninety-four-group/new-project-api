@@ -29,33 +29,28 @@ class WarehouseRepository implements WarehouseInterface
 
     public function get($id)
     {
-        $warehouse = Warehouse::find($id);
+        $query = Warehouse::where('id', $id);
 
-        if(!$warehouse){
-            return null;
-        }
-
+        $warehouse = $query->get();
         return new WarehouseResource($warehouse);
-
     }
 
     public function store(array $data)
     {
-        $brand = Warehouse::create($data);
-        return new BrandResource($brand);
+        $warehouse = Warehouse::create($data);
+        return new WarehouseResource($warehouse);
     }
 
     public function update($id, array $data)
     {
-        $brand = Brand::find($id);
+        $warehouse = Warehouse::find($id);
 
-        $brand->name = $data['name'];
-        $brand->slug = $data['slug'];
-        $brand->image = $data['image'] ?? $brand->image;
+        $warehouse->name = $data['name'];
+        $warehouse->slug = $data['slug'];
 
-        $brand->update();
+        $warehouse->update();
 
-        return new BrandResource($brand);
+        return new WarehouseResource($warehouse);
     }
 
     public function delete($id)
