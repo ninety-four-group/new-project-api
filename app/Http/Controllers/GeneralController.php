@@ -7,7 +7,6 @@ use App\Traits\HttpResponses;
 
 class GeneralController extends Controller
 {
-
     use HttpResponses;
 
     public function getCountries()
@@ -21,10 +20,11 @@ class GeneralController extends Controller
         $data = json_decode(file_get_contents(base_path("/mockup/regions.json")), null, 512, JSON_THROW_ON_ERROR);
         $filtered_arr = array_filter(
             $data,
-            function($obj) use ($id){
-               return $obj->country_id == $id;
-            });
-        return $this->success($filtered_arr, 'Region List');
+            function ($obj) use ($id) {
+                return $obj->country_id == $id;
+            }
+        );
+        return $this->success(array_values($filtered_arr), 'Region List');
     }
 
     public function getCities($id)
@@ -32,10 +32,11 @@ class GeneralController extends Controller
         $data = json_decode(file_get_contents(base_path("/mockup/cities.json")), null, 512, JSON_THROW_ON_ERROR);
         $filtered_arr = array_filter(
             $data,
-            function($obj) use ($id){
-               return $obj->region_id == $id;
-            });
-        return $this->success($filtered_arr, 'City List');
+            function ($obj) use ($id) {
+                return $obj->region_id == $id;
+            }
+        );
+        return $this->success(array_values($filtered_arr), 'City List');
     }
 
     public function getTownships($id)
@@ -43,11 +44,10 @@ class GeneralController extends Controller
         $data = json_decode(file_get_contents(base_path("/mockup/townships.json")), null, 512, JSON_THROW_ON_ERROR);
         $filtered_arr = array_filter(
             $data,
-            function($obj) use ($id){
-               return $obj->city_id == $id;
-            });
-        return $this->success($filtered_arr, 'Township List');
+            function ($obj) use ($id) {
+                return $obj->city_id == $id;
+            }
+        );
+        return $this->success(array_values($filtered_arr), 'Township List');
     }
-
-
 }
