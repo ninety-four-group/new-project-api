@@ -27,14 +27,13 @@ Route::post('register', [AuthController::class,'register']);
 Route::get('home', [HomeController::class,'getHomeData']);
 
 
-Route::get('countries',[GeneralController::class,'getCountries']);
-Route::get('regions/{country_id}',[GeneralController::class,'getRegions']);
-Route::get('cities/{region_id}',[GeneralController::class,'getCities']);
-Route::get('townships/{city_id}',[GeneralController::class,'getTownships']);
+Route::get('countries', [GeneralController::class,'getCountries']);
+Route::get('regions/{country_id}', [GeneralController::class,'getRegions']);
+Route::get('cities/{region_id}', [GeneralController::class,'getCities']);
+Route::get('townships/{city_id}', [GeneralController::class,'getTownships']);
 
-Route::get('collections',[CollectionController::class, 'getCollections']);
-Route::get('tags',[TagController::class, 'getTags']);
-
+Route::get('collections', [CollectionController::class, 'getCollections']);
+Route::get('tags', [TagController::class, 'getTags']);
 Route::get('categories', [CategoryController::class,'getCategories']);
 Route::get('brands', [BrandController::class,'getBrands']);
 Route::get('warehouses', [WarehouseController::class,'getWarehouses']);
@@ -84,15 +83,14 @@ Route::get('diy', [DIYController::class,'getDIY']);
 Route::get('diy/{id}', [DIYController::class,'getDIYDetail']);
 
 
-Route::get('project-calculator/category',[ProjectCalculatorController::class , 'getCategories']);
-Route::get('project-calculator/type',[ProjectCalculatorController::class , 'getProductType']);
-Route::post('project-calculator/calculate',[ProjectCalculatorController::class , 'calculateProject']);
+Route::get('project-calculator/category', [ProjectCalculatorController::class , 'getCategories']);
+Route::get('project-calculator/type', [ProjectCalculatorController::class , 'getProductType']);
+Route::post('project-calculator/calculate', [ProjectCalculatorController::class , 'calculateProject']);
 
 Route::middleware(['auth:sanctum', 'abilities:user'])->group(function () {
     Route::get('me', [AuthController::class,'getMe']);
     Route::post('logout', [AuthController::class,'logout']);
 
-    Route::get('profile',[UserController::class,'getProfile']);
-    Route::put('profile',[UserController::class,'updateProfile']);
-
+    Route::get('profile', [UserController::class,'getProfile']);
+    Route::put('profile', [UserController::class,'updateProfile']);
 });

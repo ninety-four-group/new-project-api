@@ -20,7 +20,7 @@ class CategoryRepository implements CategoryInterface
 
         if ($search) {
             $query->where('name', 'LIKE', "%{$search}%");
-            $query->where('mm_name', 'LIKE', "%{$search}%");
+            $query->orWhere('mm_name', 'LIKE', "%{$search}%");
         }
 
         $query->with('subcategory');
