@@ -2,21 +2,22 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Contracts\MediaInterface;
 use Illuminate\Http\Request;
 use App\Traits\HttpResponses;
-use App\Contracts\TagInterface;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\StoreTagRequest;
-use App\Http\Requests\UpdateTagRequest;
-use App\Models\Tag;
+use App\Http\Requests\StoreMediaRequest;
+use App\Models\Media;
+use Image;
 
-class TagController extends Controller
+class MediaController extends Controller
 {
+
     use HttpResponses;
 
     protected $interface;
 
-    public function __construct(TagInterface $interface)
+    public function __construct(MediaInterface $interface)
     {
         $this->interface = $interface;
     }
@@ -29,7 +30,7 @@ class TagController extends Controller
     public function index(Request $request)
     {
         $data = $this->interface->all($request);
-        return $this->success($data, 'Tag List');
+        return $this->success($data, 'Media List');
     }
 
 
@@ -39,17 +40,25 @@ class TagController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreTagRequest $request)
+    public function store(StoreMediaRequest $request)
     {
-        $data = [
-            'name' => $request->name,
-            'mm_name' => $request->mm_name,
-            'status' => $request->status
-        ];
 
-        $save = $this->interface->store($data);
+        $image = $request->file('file');
+        $file_name = time() . '_' . $image->getClientOriginalName();
 
-        return $this->success($save, 'Successfully created');
+        $img = Image::make($image->path());
+
+        $img->resize(110, 110, function ($const) {
+            $const->aspectRatio();
+        })->save(storage_path('app/public/media/thumbnails').'/'.$file_name);
+
+        $image->move(storage_path('app/public/media'), $file_name);
+
+        $media = Media::create([
+            'file' => $file_name
+        ]);
+
+        return $this->success($media, 'Successfully created');
     }
 
     /**
@@ -61,7 +70,7 @@ class TagController extends Controller
     public function show($id)
     {
         $data = $this->interface->get($id);
-        return $this->success($data, 'Warehouse Detail');
+        return $this->success($data, 'Media Detail');
     }
 
 
@@ -72,24 +81,9 @@ class TagController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateTagRequest $request, $id)
+    public function update(Request $request, $id)
     {
-        $find = Tag::find($id);
 
-        if (!$find) {
-            return $this->error(null, 'Tag not found', 404);
-        }
-
-        $data = [
-            'name' => $request->name ?? $find->name,
-            'mm_name' => $request->mm_name ?? $find->mm_name,
-            'status' => $request->status ?? $find->status
-        ];
-
-
-        $update = $this->interface->update($id, $data);
-
-        return $this->success($update, 'Successfully updated');
     }
 
     /**
@@ -100,10 +94,10 @@ class TagController extends Controller
      */
     public function destroy($id)
     {
-        $data = Tag::find($id);
+        $data = Media::find($id);
 
         if (!$data) {
-            return $this->error(null, 'Tag not found', 404);
+            return $this->error(null, 'Media not found', 404);
         }
 
         $data->delete();

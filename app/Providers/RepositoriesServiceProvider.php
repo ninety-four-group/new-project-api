@@ -39,6 +39,21 @@ class RepositoriesServiceProvider extends ServiceProvider
         );
 
         $this->app->bind(
+            'App\Contracts\TagInterface',
+            'App\Repositories\TagRepository',
+        );
+
+        $this->app->bind(
+            'App\Contracts\CollectionInterface',
+            'App\Repositories\CollectionRepository',
+        );
+
+        $this->app->bind(
+            'App\Contracts\MediaInterface',
+            'App\Repositories\MediaRepository',
+        );
+
+        $this->app->bind(
             'App\Contracts\ProductInterface',
             'App\Repositories\ProductRepository',
         );

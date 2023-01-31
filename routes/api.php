@@ -40,13 +40,6 @@ Route::get('warehouses', [WarehouseController::class,'getWarehouses']);
 
 Route::get('products', [ProductController::class,'getProductList']);
 
-
-
-
-
-
-
-
 Route::get('products/{id}', [ProductController::class,'getProductDetail']);
 Route::post('reviews', [ReviewController::class,'giveReview']);
 

@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class UpdateProductRequest extends FormRequest
+class UpdateMediaRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,7 +24,11 @@ class UpdateProductRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'title' =>  ['sometimes','string','max:255'],
+            'caption' =>  ['sometimes','string','max:255'],
+            'alt_text' =>  ['sometimes','string','max:255'],
+            'description' =>  ['sometimes','string','max:255'],
+            'file' =>  ['sometimes','image','mimes:jpg,jpeg,png,svg,gif','max:20000'], //20 MB
         ];
     }
 }

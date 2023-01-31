@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Tag;
 use App\Traits\HttpResponses;
 use Illuminate\Http\Request;
 
@@ -11,7 +12,7 @@ class TagController extends Controller
 
     public function getTags()
     {
-        $data = json_decode(file_get_contents(base_path("/mockup/tags.json")), null, 512, JSON_THROW_ON_ERROR);
+        $data = Tag::all();
         return $this->success($data, 'Tag List');
     }
 }
