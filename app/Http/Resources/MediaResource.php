@@ -3,6 +3,7 @@
 namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
+use Illuminate\Support\Facades\Storage;
 
 class MediaResource extends JsonResource
 {
@@ -14,6 +15,16 @@ class MediaResource extends JsonResource
      */
     public function toArray($request)
     {
-        return parent::toArray($request);
+        // return parent::toArray($request);
+
+        return [
+            'id' => $this->id,
+            'title' => $this->title,
+            'caption' => $this->caption,
+            'alt_text' => $this->alt_text,
+            'description' => $this->description,
+            'file' => Storage::disk('public')->url('media/'.$this->file),
+            'thumbnail' => Storage::disk('public')->url('media/thumbnails/'.$this->file),
+        ];
     }
 }

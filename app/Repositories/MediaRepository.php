@@ -17,8 +17,10 @@ class MediaRepository implements MediaInterface
         $query = Media::query();
 
         if ($search) {
-            $query->where('name', 'LIKE', "%{$search}%");
-            $query->orWhere('mm_name', 'LIKE', "%{$search}%");
+            $query->where('title', 'LIKE', "%{$search}%");
+            $query->orWhere('caption', 'LIKE', "%{$search}%");
+            $query->orWhere('alt_text', 'LIKE', "%{$search}%");
+            $query->orWhere('description', 'LIKE', "%{$search}%");
         }
 
         $data = $query->simplePaginate($limit);
@@ -29,20 +31,16 @@ class MediaRepository implements MediaInterface
     public function get($id)
     {
         $query = Media::where('id', $id);
-
-        $data = $query->get();
+        $data = $query->first();
         return new MediaResource($data);
     }
 
     public function store(array $data)
     {
-        $store = Media::create($data);
-        return new MediaResource($store);
     }
 
     public function update($id, array $data)
     {
-
     }
 
     public function delete($id)

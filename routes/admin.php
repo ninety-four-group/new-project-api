@@ -8,6 +8,7 @@ use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\TagController;
 use App\Http\Controllers\Admin\CollectionController;
 use App\Http\Controllers\Admin\MediaController;
+use App\Http\Controllers\Admin\VariationController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -23,6 +24,7 @@ Route::middleware(['auth:sanctum', 'abilities:admin'])->group(function () {
     Route::resource('warehouses', WarehouseController::class);
     Route::resource('products', ProductController::class);
     Route::resource('tags', TagController::class);
-    Route::resource('collections',CollectionController::class);
-    Route::resource('media',MediaController::class);
+    Route::resource('collections', CollectionController::class);
+    Route::resource('media', MediaController::class);
+    Route::resource('variation', VariationController::class);
 });
