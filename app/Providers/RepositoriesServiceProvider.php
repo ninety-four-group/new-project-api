@@ -38,6 +38,12 @@ class RepositoriesServiceProvider extends ServiceProvider
             'App\Repositories\WarehouseRepository',
         );
 
+
+        $this->app->bind(
+            'App\Contracts\VariationInterface',
+            'App\Repositories\VariationRepository',
+        );
+
         $this->app->bind(
             'App\Contracts\TagInterface',
             'App\Repositories\TagRepository',
