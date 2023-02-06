@@ -42,6 +42,7 @@ class ProductRepository implements ProductInterface
         $query->with('brand');
         $query->with('lastUpdatedUser');
         $query->with('media');
+        $query->with('tags');
         $data = $query->first();
 
         if (!$data) {
