@@ -14,7 +14,7 @@ class ProductResource extends JsonResource
      */
     public function toArray($request)
     {
-        // return parent::toArray($request);
+
 
         return [
             'id' => $this->id,
@@ -26,9 +26,9 @@ class ProductResource extends JsonResource
             'brand' => $this->brand,
             'video_url' => $this->video_url,
             'status' => $this->status,
-            'media' => new MediaResource($this->media),
+            'media' => MediaResource::collection($this->media),
             'tags' => TagResource::collection($this->tags),
-            // 'last_updated_user' => $this->last_updated_user,
+            'last_updated_user' => $this->last_updated_user,
             'created_at' => date('d-m-Y h:i:s', strtotime($this->created_at)),
             'updated_at' => date('d-m-Y h:i:s', strtotime($this->updated_at))
         ];

@@ -41,6 +41,7 @@ class ProductController extends Controller
      */
     public function store(StoreProductRequest $request)
     {
+
         $data = [
             'name' => $request->name,
             'mm_name' => $request->mm_name ?? $request->name,
@@ -50,9 +51,10 @@ class ProductController extends Controller
             'description' => $request->description,
             'mm_description' => $request->mm_description,
             'status' => $request->status,
-            'tags' => $request->tags
+            'tags' => $request->tags,
+            'media' => $request->media,
+            'last_updated_user_id' => auth()->user()->id
         ];
-
 
 
         $save = $this->interface->store($data);

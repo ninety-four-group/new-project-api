@@ -29,7 +29,7 @@ class Product extends Model
 
     public function media()
     {
-        return $this->hasOne(Media::class, 'id', 'media_id');
+        return $this->belongsToMany(Media::class, 'product_media', 'product_id','media_id');
     }
 
     public function lastUpdatedUser()
@@ -41,4 +41,6 @@ class Product extends Model
     {
         return $this->belongsToMany(Tag::class, 'product_tags', 'product_id', 'tag_id');
     }
+
+
 }

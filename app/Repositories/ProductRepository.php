@@ -55,9 +55,21 @@ class ProductRepository implements ProductInterface
     {
         $product = Product::create($data);
 
-        $product->tags()->sync($data['tags']);
+        if ($data['tags']) {
+            $product->tags()->sync($data['tags']);
+        }
+        if ($data['media']) {
+            $product->media()->sync($data['media']);
+        }
 
-        return new ProductResource($product);
+        $query = Product::whereId($product->id);
+        $query->with('category');
+        $query->with('brand');
+        $query->with('lastUpdatedUser');
+        $query->with('media');
+        $query->with('tags');
+        $data = $query->first();
+        return new ProductResource($data);
     }
 
     public function update($id, array $data)
