@@ -14,4 +14,31 @@ class Product extends Model
     protected $fillable = [
         'brand_id','category_id','name','mm_name','video_url','description','mm_description','status','last_updated_user_id'
     ];
+
+    public function brand()
+    {
+        return $this->hasOne(Brand::class, 'id', 'brand_id');
+    }
+
+
+    public function category()
+    {
+        return $this->hasOne(Category::class, 'id', 'category_id');
+    }
+
+
+    public function media()
+    {
+        return $this->hasOne(Media::class, 'id', 'media_id');
+    }
+
+    public function lastUpdatedUser()
+    {
+        return $this->hasOne(Admin::class, 'id', 'last_updated_user_id');
+    }
+
+    public function tags()
+    {
+        return $this->belongsToMany(Tag::class, 'product_tags', 'product_id', 'tag_id');
+    }
 }

@@ -2,21 +2,19 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Contracts\ProductInterface;
+use App\Contracts\SKUInterface;
 use Illuminate\Http\Request;
 use App\Traits\HttpResponses;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\StoreProductRequest;
-use App\Http\Requests\UpdateProductRequest;
-use App\Models\Product;
+use App\Http\Requests\StoreSKURequest;
 
-class ProductController extends Controller
+class SKUController extends Controller
 {
     use HttpResponses;
 
     protected $interface;
 
-    public function __construct(ProductInterface $interface)
+    public function __construct(SKUInterface $interface)
     {
         $this->interface = $interface;
     }
@@ -29,7 +27,7 @@ class ProductController extends Controller
     public function index(Request $request)
     {
         $data = $this->interface->all($request);
-        return $this->success($data, 'Product List');
+        return $this->success($data, 'SKU List');
     }
 
 
@@ -39,21 +37,16 @@ class ProductController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreProductRequest $request)
+    public function store(StoreSKURequest $request)
     {
         $data = [
-            'name' => $request->name,
-            'mm_name' => $request->mm_name ?? $request->name,
-            'category_id' => $request->category_id,
-            'brand_id' => $request->brand_id,
-            'video_url' => $request->video_url,
-            'description' => $request->description,
-            'mm_description' => $request->mm_description,
+            'variation_id' => $request->variation_id,
+            'warehouse_id' => $request->warehouse_id,
+            'product_id' => $request->product_id,
+            'quantity' => $request->quantity,
+            'price' => $request->price,
             'status' => $request->status,
-            'tags' => $request->tags
         ];
-
-
 
         $save = $this->interface->store($data);
 
@@ -69,7 +62,7 @@ class ProductController extends Controller
     public function show($id)
     {
         $data = $this->interface->get($id);
-        return $this->success($data, 'Product Detail');
+        return $this->success($data, 'Variation Detail');
     }
 
 
@@ -80,26 +73,26 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateProductRequest $request, $id)
+    public function update(UpdateVariationRequest $request, $id)
     {
-        $find = Product::find($id);
+        $find = Variation::find($id);
 
         if (!$find) {
-            return $this->error(null, 'Product not found', 404);
+            return $this->error(null, 'Variation not found', 404);
         }
 
         $data = [
             'name' => $request->name ?? $find->name,
-            'mm_name' => $request->mm_name ?? $find->mm_name,
-            'category_id' => $request->category_id ?? $find->category_id,
-            'brand_id' => $request->brand_id ?? $find->brand_id,
-            'video_url' => $request->video_url ?? $find->video_url,
-            'description' => $request->description ?? $find->description,
-            'mm_description' => $request->mm_description ?? $find->mm_description,
-            'status' => $request->status ?? $find->status,
-            'media_id' => (int) $request->media_id ?? $find->media_id,
-            'last_updated_user_id' => auth()->user()->id
+            'variation_category_id' => $request->variation_category_id ?? $find->variation_category_id,
         ];
+
+        if ($request->hasFile('image')) {
+            if ($find->image) {
+                Storage::disk('public')->delete($find->image);
+            }
+
+            $data['image'] = $request->file('image')->store('variation', 'public');
+        }
 
 
         $update = $this->interface->update($id, $data);
@@ -115,12 +108,15 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-        $find = Product::find($id);
+        $find = Variation::find($id);
 
         if (!$find) {
-            return $this->error(null, 'Product not found', 404);
+            return $this->error(null, 'Variation not found', 404);
         }
 
+        // if ($category->image) {
+        //     Storage::delete($category->image);
+        // }
 
         $find->delete();
         return $this->success(null, 'Successfully delete');

@@ -7,6 +7,8 @@ use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\Contracts\ProductInterface;
 use App\Http\Resources\CategoryResource;
+use App\Http\Resources\ProductResource;
+use App\Models\Product;
 
 class ProductRepository implements ProductInterface
 {
@@ -15,52 +17,58 @@ class ProductRepository implements ProductInterface
         $search = $request->query('search');
         $limit = $request->query('limit', 10);
 
-        $query = Category::query();
+        $query = Product::query();
 
         if ($search) {
             $query->where('name', 'LIKE', "%{$search}%");
             $query->orWhere('mm_name', 'LIKE', "%{$search}%");
         }
 
-        $query->with('subcategory');
-        $query->with('subcategory.subcategory');
+        $query->with('category');
+        $query->with('brand');
+        $query->with('lastUpdatedUser');
+        $query->with('media');
+        $query->with('tags');
 
-        $categories = $query->simplePaginate($limit);
+        $data = $query->simplePaginate($limit);
 
-        return CategoryResource::collection($categories)->response()->getData();
+        return ProductResource::collection($data)->response()->getData();
     }
 
     public function get($id)
     {
-        $category = Category::whereId($id)
-                    ->with('subcategory')
-                    ->with('subcategory.subcategory')->first();
+        $query = Product::whereId($id);
+        $query->with('category');
+        $query->with('brand');
+        $query->with('lastUpdatedUser');
+        $query->with('media');
+        $data = $query->first();
 
-        if (!$category) {
+        if (!$data) {
             return null;
         }
 
-        return new CategoryResource($category);
+        return new ProductResource($data);
     }
 
     public function store(array $data)
     {
-        $category = Category::create($data);
-        return new CategoryResource($category);
+        $product = Product::create($data);
+
+        $product->tags()->sync($data['tags']);
+
+        return new ProductResource($product);
     }
 
     public function update($id, array $data)
     {
-        $category = Category::find($id);
-
-        $category->name = $data['name'];
-        $category->mm_name = $data['mm_name'];
-        $category->parent_id = $data['parent_id'];
-        $category->slug = $data['slug'];
-        $category->image = $data['image'] ?? $category->image;
-
-        $category->update();
-        return new CategoryResource($category);
+        $find = Product::whereId($id);
+        $find->with('category');
+        $find->with('brand');
+        $find->with('lastUpdatedUser');
+        $find->with('media');
+        $find->update($data);
+        return new ProductResource($find->first());
     }
 
     public function delete($id)

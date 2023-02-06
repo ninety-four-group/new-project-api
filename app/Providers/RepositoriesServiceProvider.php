@@ -38,6 +38,11 @@ class RepositoriesServiceProvider extends ServiceProvider
             'App\Repositories\WarehouseRepository',
         );
 
+        $this->app->bind(
+            'App\Contracts\SKUInterface',
+            'App\Repositories\SKURepository',
+        );
+
 
         $this->app->bind(
             'App\Contracts\VariationInterface',
