@@ -5,7 +5,7 @@ namespace App\Http\Resources;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class BrandResource extends JsonResource
+class SubSubCategoryResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -19,8 +19,10 @@ class BrandResource extends JsonResource
         return [
             'id' => $this->id,
             'name' => $this->name,
+            'mm_name' => $this->mm_name,
             'slug' => $this->slug,
-            'image' => Storage::disk('public')->url($this->image),
+            'image' => $this->image ? Storage::disk('public')->url($this->image) : null,
+            'highlight_flag' => $this->highlight_flag,
             'created_at' => date('d-m-Y h:i:s', strtotime($this->created_at)),
             'updated_at' => date('d-m-Y h:i:s', strtotime($this->updated_at))
         ];

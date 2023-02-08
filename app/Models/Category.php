@@ -22,12 +22,12 @@ class Category extends Model
     protected $dates = ['deleted_at'];
 
 
-    protected function image(): Attribute
-    {
-        return Attribute::make(
-            get: fn ($value) => Storage::disk('public')->url($value),
-        );
-    }
+    // protected function image(): Attribute
+    // {
+    //     return Attribute::make(
+    //         get: fn ($value) => Storage::disk('public')->url($value),
+    //     );
+    // }
 
 
     public function subcategory()

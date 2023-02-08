@@ -2,6 +2,8 @@
 
 namespace App\Http\Resources;
 
+use Illuminate\Support\Facades\Storage;
+use App\Http\Resources\SubCategoryResource;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class CategoryResource extends JsonResource
@@ -14,6 +16,17 @@ class CategoryResource extends JsonResource
      */
     public function toArray($request)
     {
-        return parent::toArray($request);
+        // return parent::toArray($request);
+        return [
+            'id' => $this->id,
+            'name' => $this->name,
+            'mm_name' => $this->mm_name,
+            'slug' => $this->slug,
+            'image' => Storage::disk('public')->url($this->image),
+            'highlight_flag' => $this->highlight_flag,
+            'subcategory' => SubCategoryResource::collection($this->subcategory),
+            'created_at' => date('d-m-Y h:i:s', strtotime($this->created_at)),
+            'updated_at' => date('d-m-Y h:i:s', strtotime($this->updated_at))
+        ];
     }
 }

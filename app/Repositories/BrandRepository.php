@@ -39,6 +39,7 @@ class BrandRepository implements BrandInterface
 
     public function update($id, array $data)
     {
+
         $brand = Brand::find($id);
 
         $brand->name = $data['name'];
@@ -46,7 +47,6 @@ class BrandRepository implements BrandInterface
         $brand->image = $data['image'] ?? $brand->image;
 
         $brand->update();
-
         return new BrandResource($brand);
     }
 
