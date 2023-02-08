@@ -23,9 +23,11 @@ class MediaRepository implements MediaInterface
             $query->orWhere('description', 'LIKE', "%{$search}%");
         }
 
-        $data = $query->simplePaginate($limit);
+        $data = $query->paginate($limit);
 
-        return MediaResource::collection($data)->response()->getData();
+        return MediaResource::collection($data)->additional(['meta' => [
+            'total_page' => (int) ceil($data->total() / $data->perPage()),
+        ]])->response()->getData();
     }
 
     public function get($id)

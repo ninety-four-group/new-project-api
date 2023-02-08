@@ -26,9 +26,11 @@ class VariationRepository implements VariationInterface
 
         $query->with('variationCategory');
 
-        $data = $query->simplePaginate($limit);
+        $data = $query->paginate($limit);
 
-        return VariationResource::collection($data)->response()->getData();
+        return VariationResource::collection($data)->additional(['meta' => [
+            'total_page' => (int) ceil($data->total() / $data->perPage()),
+        ]])->response()->getData();
     }
 
     public function get($id)

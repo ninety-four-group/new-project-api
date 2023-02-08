@@ -30,9 +30,11 @@ class ProductRepository implements ProductInterface
         $query->with('media');
         $query->with('tags');
 
-        $data = $query->simplePaginate($limit);
+        $data = $query->paginate($limit);
 
-        return ProductResource::collection($data)->response()->getData();
+        return ProductResource::collection($data)->additional(['meta' => [
+            'total_page' => (int) ceil($data->total() / $data->perPage()),
+        ]])->response()->getData();
     }
 
     public function get($id)

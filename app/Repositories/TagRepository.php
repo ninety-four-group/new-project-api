@@ -26,9 +26,11 @@ class TagRepository implements TagInterface
             $query->orWhere('mm_name', 'LIKE', "%{$search}%");
         }
 
-        $data = $query->simplePaginate($limit);
+        $data = $query->paginate($limit);
 
-        return TagResource::collection($data)->response()->getData();
+        return TagResource::collection($data)->additional(['meta' => [
+            'total_page' => (int) ceil($data->total() / $data->perPage()),
+        ]])->response()->getData();
     }
 
     public function get($id)

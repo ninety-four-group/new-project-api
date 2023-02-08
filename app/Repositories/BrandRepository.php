@@ -22,7 +22,9 @@ class BrandRepository implements BrandInterface
 
         $brands = $query->paginate($limit);
 
-        return BrandResource::collection($brands)->response()->getData();
+        return BrandResource::collection($brands)->additional(['meta' => [
+            'total_page' => (int) ceil($brands->total() / $brands->perPage()),
+        ]])->response()->getData();
     }
 
     public function get($id)

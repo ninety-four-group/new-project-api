@@ -28,7 +28,12 @@ class CategoryRepository implements CategoryInterface
 
         $categories = $query->paginate($limit);
 
-        return CategoryResource::collection($categories)->response()->getData();
+        $totalPage = collect(['total_page' => (int) ceil($categories->total() / $categories->perPage())]);
+
+
+        return CategoryResource::collection($categories)->additional(['meta' => [
+            'total_page' => (int) ceil($categories->total() / $categories->perPage()),
+        ]])->response()->getData();
     }
 
     public function get($id)

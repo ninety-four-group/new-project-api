@@ -24,9 +24,11 @@ class SKURepository implements SKUInterface
         }
 
 
-        $data = $query->simplePaginate($limit);
+        $data = $query->paginate($limit);
 
-        return SKUResource::collection($data)->response()->getData();
+        return SKUResource::collection($data)->additional(['meta' => [
+            'total_page' => (int) ceil($data->total() / $data->perPage()),
+        ]])->response()->getData();
     }
 
     public function get($id)

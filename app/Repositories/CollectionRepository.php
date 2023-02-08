@@ -30,9 +30,11 @@ class CollectionRepository implements CollectionInterface
             $query->where('end_date', '<=' , $request->end_date);
         }
 
-        $data = $query->simplePaginate($limit);
+        $data = $query->paginate($limit);
 
-        return CollectionResource::collection($data)->response()->getData();
+        return CollectionResource::collection($data)->additional(['meta' => [
+            'total_page' => (int) ceil($data->total() / $data->perPage()),
+        ]])->response()->getData();
     }
 
     public function get($id)

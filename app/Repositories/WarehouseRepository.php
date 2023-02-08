@@ -22,9 +22,11 @@ class WarehouseRepository implements WarehouseInterface
             $query->where('name', 'LIKE', "%{$search}%");
         }
 
-        $warehouses = $query->simplePaginate($limit);
+        $warehouses = $query->paginate($limit);
 
-        return WarehouseResource::collection($warehouses)->response()->getData();
+        return WarehouseResource::collection($warehouses)->additional(['meta' => [
+            'total_page' => (int) ceil($warehouses->total() / $warehouses->perPage()),
+        ]])->response()->getData();
     }
 
     public function get($id)
