@@ -26,7 +26,7 @@ class CategoryRepository implements CategoryInterface
         $query->with('subcategory');
         $query->with('subcategory.subcategory');
 
-        $categories = $query->simplePaginate($limit);
+        $categories = $query->paginate($limit);
 
         return CategoryResource::collection($categories)->response()->getData();
     }

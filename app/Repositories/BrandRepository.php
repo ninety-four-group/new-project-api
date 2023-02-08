@@ -20,7 +20,7 @@ class BrandRepository implements BrandInterface
             $query->where('name', 'LIKE', "%{$search}%");
         }
 
-        $brands = $query->simplePaginate($limit);
+        $brands = $query->paginate($limit);
 
         return BrandResource::collection($brands)->response()->getData();
     }
