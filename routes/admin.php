@@ -17,18 +17,18 @@ use Illuminate\Support\Facades\Route;
 Route::post('login', [AuthController::class,'login']);
 Route::post('register', [AuthController::class,'register']);
 
-Route::middleware(['auth:sanctum', 'abilities:admin'])->group(function () {
-    Route::get('me', [AuthController::class,'getMe']);
-    Route::post('logout', [AuthController::class,'logout']);
+// Route::middleware(['auth:sanctum', 'abilities:admin'])->group(function () {
+Route::get('me', [AuthController::class,'getMe']);
+Route::post('logout', [AuthController::class,'logout']);
 
-    Route::resource('categories', CategoryController::class);
-    Route::resource('brands', BrandController::class);
-    Route::resource('warehouses', WarehouseController::class);
-    Route::resource('products', ProductController::class);
-    Route::resource('tags', TagController::class);
-    Route::resource('collections', CollectionController::class);
-    Route::resource('media', MediaController::class);
-    Route::resource('variation-categories', VariationCategoryController::class);
-    Route::resource('variations', VariationController::class);
-    Route::resource('sku', SKUController::class);
-});
+Route::resource('categories', CategoryController::class);
+Route::resource('brands', BrandController::class);
+Route::resource('warehouses', WarehouseController::class);
+Route::resource('products', ProductController::class);
+Route::resource('tags', TagController::class);
+Route::resource('collections', CollectionController::class);
+Route::resource('media', MediaController::class);
+Route::resource('variation-categories', VariationCategoryController::class);
+Route::resource('variations', VariationController::class);
+Route::resource('sku', SKUController::class);
+// });
