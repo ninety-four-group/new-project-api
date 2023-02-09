@@ -36,8 +36,7 @@ class TagRepository implements TagInterface
     public function get($id)
     {
         $query = Tag::where('id', $id);
-
-        $data = $query->get();
+        $data = $query->first();
         return new TagResource($data);
     }
 
