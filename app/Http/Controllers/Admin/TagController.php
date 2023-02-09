@@ -93,7 +93,6 @@ class TagController extends Controller
             'status' => $request->status ?? $find->status
         ];
 
-
         $update = $this->interface->update($id, $data);
 
         return $this->success($update, 'Successfully updated');

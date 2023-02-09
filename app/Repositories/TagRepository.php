@@ -48,15 +48,15 @@ class TagRepository implements TagInterface
 
     public function update($id, array $data)
     {
-        $data = Tag::find($id);
+        $find = Tag::find($id);
 
-        $data->name = $data['name'];
-        $data->mm_name = $data['mm_name'];
-        $data->status = $data['status'];
+        $find->name = $data['name'];
+        $find->mm_name = $data['mm_name'];
+        $find->status = $data['status'];
 
-        $data->update();
+        $find->update();
 
-        return new TagResource($data);
+        return new TagResource($find);
     }
 
     public function delete($id)
