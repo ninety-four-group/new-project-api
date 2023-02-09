@@ -43,7 +43,7 @@ class TagController extends Controller
     {
         $data = [
             'name' => $request->name,
-            'mm_name' => $request->mm_name,
+            'mm_name' => $request->mm_name ?? $request->name,
             'status' => $request->status
         ];
 
@@ -60,8 +60,15 @@ class TagController extends Controller
      */
     public function show($id)
     {
+
+        $find = Tag::find($id);
+
+        if (!$find) {
+            return $this->error(null, 'Tag not found', 404);
+        }
+
         $data = $this->interface->get($id);
-        return $this->success($data, 'Warehouse Detail');
+        return $this->success($data, 'Tag Detail');
     }
 
 
