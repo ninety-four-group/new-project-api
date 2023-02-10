@@ -39,6 +39,7 @@ class CategoryRepository implements CategoryInterface
 
         $query->with('subcategory');
         $query->with('subcategory.subcategory');
+        $query->with('parent');
 
         $categories = $query->paginate($limit);
 
