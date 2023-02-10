@@ -41,6 +41,11 @@ Route::get('townships/{city_id}', [GeneralController::class,'getTownships']);
 Route::get('collections', [CollectionController::class, 'getCollections']);
 Route::get('tags', [TagController::class, 'getTags']);
 Route::get('categories', [CategoryController::class,'getCategories']);
+
+Route::get('categories/one', [CategoryController::class,'getCategoryOne']);
+Route::get('categories/two', [CategoryController::class,'getCategoryTwo']);
+Route::get('categories/three', [CategoryController::class,'getCategoryThree']);
+
 Route::get('brands', [BrandController::class,'getBrands']);
 Route::get('warehouses', [WarehouseController::class,'getWarehouses']);
 

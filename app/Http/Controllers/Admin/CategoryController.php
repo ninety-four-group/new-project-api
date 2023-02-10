@@ -9,6 +9,7 @@ use App\Contracts\CategoryInterface;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreCategoryRequest;
 use App\Http\Requests\UpdateCategoryRequest;
+use App\Http\Resources\CategoryResource;
 use App\Models\Category;
 use Illuminate\Support\Facades\Storage;
 
@@ -31,6 +32,7 @@ class CategoryController extends Controller
     public function index(Request $request)
     {
         $categories = $this->category->all($request);
+
         return $this->success($categories, 'Category List');
     }
 

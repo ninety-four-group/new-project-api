@@ -23,13 +23,23 @@ class CategoryRepository implements CategoryInterface
             $query->orWhere('mm_name', 'LIKE', "%{$search}%");
         }
 
+        if($request->level){
+            if($request->level === "one"){
+                $query = $query->where('parent_id' , null);
+            }else if($request->level === "two"){
+                $main_categories = Category::where('parent_id' , null)->select('id')->pluck('id');
+                $query = $query->whereIn('parent_id',$main_categories);
+            }else if($request->level === "three"){
+                $main_categories = Category::where('parent_id' , null)->select('id')->pluck('id');
+                $sub_categories = Category::whereIn('parent_id',$main_categories)->select('id')->pluck('id');
+                $query = $query->whereIn('parent_id',$sub_categories);
+            }
+        }
+
         $query->with('subcategory');
         $query->with('subcategory.subcategory');
 
         $categories = $query->paginate($limit);
-
-        $totalPage = collect(['total_page' => (int) ceil($categories->total() / $categories->perPage())]);
-
 
         return CategoryResource::collection($categories)->additional(['meta' => [
             'total_page' => (int) ceil($categories->total() / $categories->perPage()),
