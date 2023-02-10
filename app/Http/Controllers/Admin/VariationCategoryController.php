@@ -30,9 +30,11 @@ class VariationCategoryController extends Controller
             $query->where('name', 'LIKE', "%{$search}%");
         }
 
-        $data = $query->simplePaginate($limit);
+        $data = $query->paginate($limit);
 
-        return $this->success(VariationCategoryResource::collection($data)->response()->getData(),'Variation Category List');
+        return $this->success(VariationCategoryResource::collection($data)->additional(['meta' => [
+            'total_page' => (int) ceil($data->total() / $data->perPage()),
+        ]])->response()->getData(),'Variation Category List');
     }
 
 
