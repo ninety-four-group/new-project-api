@@ -53,16 +53,16 @@ class CollectionRepository implements CollectionInterface
 
     public function update($id, array $data)
     {
-        $data = Collection::find($id);
+        $find = Collection::find($id);
 
-        $data->name = $data['name'];
-        $data->mm_name = $data['mm_name'];
-        $data->start_date = $data['start_date'];
-        $data->end_date = $data['end_date'];
+        $find->name = $data['name'];
+        $find->mm_name = $data['mm_name'];
+        $find->start_date = $data['start_date'];
+        $find->end_date = $data['end_date'];
 
-        $data->update();
+        $find->update();
 
-        return new CollectionResource($data);
+        return new CollectionResource($find);
     }
 
     public function delete($id)
