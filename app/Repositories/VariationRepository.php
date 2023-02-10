@@ -49,6 +49,8 @@ class VariationRepository implements VariationInterface
     public function store(array $data)
     {
         $data = Variation::create($data);
+
+
         return new VariationResource($data);
     }
 

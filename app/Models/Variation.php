@@ -15,6 +15,6 @@ class Variation extends Model
 
     public function variationCategory()
     {
-        return $this->belongsTo(VariationCategory::class, 'id');
+        return $this->belongsTo(VariationCategory::class, 'variation_category_id');
     }
 }
