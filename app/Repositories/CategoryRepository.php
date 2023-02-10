@@ -36,10 +36,12 @@ class CategoryRepository implements CategoryInterface
             }
         }
 
+
         $query->with('subcategory');
         $query->with('subcategory.subcategory');
 
         $categories = $query->paginate($limit);
+
 
         return CategoryResource::collection($categories)->additional(['meta' => [
             'total_page' => (int) ceil($categories->total() / $categories->perPage()),
