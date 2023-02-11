@@ -78,6 +78,14 @@ class ProductRepository implements ProductInterface
     public function update($id, array $data)
     {
         $find = Product::whereId($id);
+
+        if ($data['tags']) {
+            $find->tags()->sync($data['tags']);
+        }
+        if ($data['media']) {
+            $find->media()->sync($data['media']);
+        }
+
         $find->with('category');
         $find->with('brand');
         $find->with('lastUpdatedUser');
