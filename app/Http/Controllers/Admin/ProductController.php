@@ -99,7 +99,7 @@ class ProductController extends Controller
             'description' => $request->description ?? $find->description,
             'mm_description' => $request->mm_description ?? $find->mm_description,
             'status' => $request->status ?? $find->status,
-            'media_id' => (int) $request->media_id ?? $find->media_id,
+            'media' => (int) $request->media ?? $find->media,
             'last_updated_user_id' => null
         ];
 
