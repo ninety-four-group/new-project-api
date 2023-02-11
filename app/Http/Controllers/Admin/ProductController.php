@@ -53,7 +53,7 @@ class ProductController extends Controller
             'status' => $request->status,
             'tags' => $request->tags,
             'media' => $request->media,
-            'last_updated_user_id' => auth()->user()->id
+            'last_updated_user_id' => null
         ];
 
 
