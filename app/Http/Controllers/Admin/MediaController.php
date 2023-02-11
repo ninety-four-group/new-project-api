@@ -65,7 +65,11 @@ class MediaController extends Controller
         $image->move(storage_path('app/public/media'), $file_name);
 
         $media = Media::create([
-            'file' => $file_name
+            'title' => $request->title,
+            'caption' => $request->caption,
+            'alt_text' => $request->alt_text,
+            'description' => $request->description,
+            'file' => $file_name,
         ]);
 
         return $this->success(new MediaResource($media), 'Successfully created');
