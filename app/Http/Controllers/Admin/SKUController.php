@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Traits\HttpResponses;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreSKURequest;
+use App\Http\Requests\UpdateSKURequest;
+use App\Models\StockKeepingUnit;
 
 class SKUController extends Controller
 {
@@ -73,27 +75,22 @@ class SKUController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateVariationRequest $request, $id)
+    public function update(UpdateSKURequest $request, $id)
     {
-        $find = Variation::find($id);
+        $find = StockKeepingUnit::find($id);
 
         if (!$find) {
-            return $this->error(null, 'Variation not found', 404);
+            return $this->error(null, 'SKU not found', 404);
         }
 
         $data = [
-            'name' => $request->name ?? $find->name,
-            'variation_category_id' => $request->variation_category_id ?? $find->variation_category_id,
+            'variation_id' => $request->variation_id ?? $find->variation_id,
+            'warehouse_id' => $request->warehouse_id  ?? $find->warehouse_id,
+            'product_id' => $request->product_id  ?? $find->product_id,
+            'quantity' => $request->quantity  ?? $find->quantity,
+            'price' => $request->price  ?? $find->price,
+            'status' => $request->status  ?? $find->status,
         ];
-
-        if ($request->hasFile('image')) {
-            if ($find->image) {
-                Storage::disk('public')->delete($find->image);
-            }
-
-            $data['image'] = $request->file('image')->store('variation', 'public');
-        }
-
 
         $update = $this->interface->update($id, $data);
 
@@ -108,10 +105,10 @@ class SKUController extends Controller
      */
     public function destroy($id)
     {
-        $find = Variation::find($id);
+        $find = StockKeepingUnit::find($id);
 
         if (!$find) {
-            return $this->error(null, 'Variation not found', 404);
+            return $this->error(null, 'SKU not found', 404);
         }
 
         // if ($category->image) {

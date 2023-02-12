@@ -52,11 +52,7 @@ class SKURepository implements SKUInterface
     public function update($id, array $data)
     {
         $find = StockKeepingUnit::find($id);
-
-        $find->name = $data['name'];
-        $find->variation_category_id = $data['variation_category_id'];
-        $find->image = $data['image'] ?? $find->image;
-        $find->update();
+        $find->update($data);
         return new SKUResource($find);
     }
 
