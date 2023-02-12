@@ -23,6 +23,10 @@ class SKURepository implements SKUInterface
             $query->where('name', 'LIKE', "%{$search}%");
         }
 
+        $query->with('warehouse');
+        $query->with('variation');
+        $query->with('product');
+
 
         $data = $query->paginate($limit);
 
