@@ -3,12 +3,16 @@
 use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\BrandController;
 use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\CityController;
 use App\Http\Controllers\Admin\WarehouseController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\TagController;
 use App\Http\Controllers\Admin\CollectionController;
+use App\Http\Controllers\Admin\CountryController;
 use App\Http\Controllers\Admin\MediaController;
+use App\Http\Controllers\Admin\RegionController;
 use App\Http\Controllers\Admin\SKUController;
+use App\Http\Controllers\Admin\TownshipController;
 use App\Http\Controllers\Admin\VariationCategoryController;
 use App\Http\Controllers\Admin\VariationController;
 use Illuminate\Http\Request;
@@ -36,4 +40,10 @@ Route::resource('media', MediaController::class);
 Route::resource('variation-categories', VariationCategoryController::class);
 Route::resource('variations', VariationController::class);
 Route::resource('sku', SKUController::class);
+
+Route::resource('countries', CountryController::class);
+Route::resource('regions', RegionController::class);
+Route::resource('cities', CityController::class);
+Route::resource('townships', TownshipController::class);
+
 // });

@@ -55,6 +55,26 @@ class RepositoriesServiceProvider extends ServiceProvider
         );
 
         $this->app->bind(
+            'App\Contracts\CountryInterface',
+            'App\Repositories\CountryRepository',
+        );
+
+        $this->app->bind(
+            'App\Contracts\RegionInterface',
+            'App\Repositories\RegionRepository',
+        );
+
+        $this->app->bind(
+            'App\Contracts\CityInterface',
+            'App\Repositories\CityRepository',
+        );
+
+        $this->app->bind(
+            'App\Contracts\TownshipInterface',
+            'App\Repositories\TownshipRepository',
+        );
+
+        $this->app->bind(
             'App\Contracts\CollectionInterface',
             'App\Repositories\CollectionRepository',
         );
