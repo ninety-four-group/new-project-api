@@ -41,7 +41,6 @@ class ProductController extends Controller
      */
     public function store(StoreProductRequest $request)
     {
-
         $data = [
             'name' => $request->name,
             'mm_name' => $request->mm_name ?? $request->name,
@@ -51,6 +50,7 @@ class ProductController extends Controller
             'description' => $request->description,
             'mm_description' => $request->mm_description,
             'status' => $request->status,
+            'warehouses' => $request->warehouses,
             'tags' => $request->tags,
             'media' => $request->media,
             'last_updated_user_id' => null
@@ -124,6 +124,9 @@ class ProductController extends Controller
             return $this->error(null, 'Product not found', 404);
         }
 
+        $find->warehouse()->detach();
+        $find->tags()->detach();
+        $find->media()->detach();
 
         $find->delete();
         return $this->success(null, 'Successfully delete');

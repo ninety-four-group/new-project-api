@@ -45,6 +45,8 @@ class VariationController extends Controller
         $data = [
             'name' => $request->name,
             'variation_category_id' => $request->variation_category_id,
+            'type' => $request->type,
+            'type_value' => $request->type_value,
         ];
 
         if ($request->hasFile('image')) {
@@ -87,6 +89,8 @@ class VariationController extends Controller
         $data = [
             'name' => $request->name ?? $find->name,
             'variation_category_id' => $request->variation_category_id ?? $find->variation_category_id,
+            'type' => $request->type ?? $find->type,
+            'type_value' => $request->type_value ?? $find->type_value,
         ];
 
         if ($request->hasFile('image')) {

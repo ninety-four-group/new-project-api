@@ -29,8 +29,15 @@ class Product extends Model
 
     public function media()
     {
-        return $this->belongsToMany(Media::class, 'product_media', 'product_id','media_id');
+        return $this->belongsToMany(Media::class, 'product_media', 'product_id', 'media_id');
     }
+
+
+    public function warehouse()
+    {
+        return $this->belongsToMany(Warehouse::class, 'product_warehouses', 'product_id', 'warehouse_id');
+    }
+
 
     public function lastUpdatedUser()
     {

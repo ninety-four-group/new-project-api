@@ -65,6 +65,11 @@ class ProductRepository implements ProductInterface
             $product->media()->sync($data['media']);
         }
 
+        if ($data['warehouses']) {
+            $product->warehouse()->sync($data['warehouses']);
+        }
+
+
         $query = Product::whereId($product->id);
         $query->with('category');
         $query->with('brand');
@@ -84,6 +89,10 @@ class ProductRepository implements ProductInterface
         }
         if ($data['media']) {
             $find->media()->sync($data['media']);
+        }
+
+        if ($data['warehouses']) {
+            $find->warehouse()->sync($data['warehouses']);
         }
 
         $find->with('category');

@@ -11,7 +11,7 @@ class Variation extends Model
     use HasFactory;
     use SoftDeletes;
 
-    protected $fillable = ['name','variation_category_id','image'];
+    protected $fillable = ['name','variation_category_id','image','type','type_value'];
 
     public function variationCategory()
     {
