@@ -60,6 +60,8 @@ class VariationRepository implements VariationInterface
 
         $find->name = $data['name'];
         $find->variation_category_id = $data['variation_category_id'];
+        $find->type = $data['type'];
+        $find->type_value = $data['type_value'];
         $find->image = $data['image'] ?? $find->image;
         $find->update();
         return new VariationResource($find);

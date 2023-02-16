@@ -82,8 +82,8 @@ class ProductRepository implements ProductInterface
 
     public function update($id, array $data)
     {
-        $find = Product::whereId($id);
-
+        $find = Product::whereId($id)->first();
+        
         if ($data['tags']) {
             $find->tags()->sync($data['tags']);
         }
@@ -99,8 +99,20 @@ class ProductRepository implements ProductInterface
         $find->with('brand');
         $find->with('lastUpdatedUser');
         $find->with('media');
-        $find->update($data);
-        return new ProductResource($find->first());
+   
+
+        $find->name = $data['name'];
+        $find->mm_name = $data['mm_name'];
+        $find->video_url = $data['video_url'];
+        $find->brand_id = $data['brand_id'];
+        $find->category_id = $data['category_id'];
+        $find->description = $data['description'];
+        $find->mm_description = $data['mm_description'];
+        $find->status = $data['status'];
+
+        $find->update();
+      
+        return new ProductResource($find);
     }
 
     public function delete($id)

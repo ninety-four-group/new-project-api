@@ -84,7 +84,14 @@ class ProductController extends Controller
      */
     public function update(UpdateProductRequest $request, $id)
     {
-        $find = Product::find($id);
+        $query = Product::whereId($id);
+
+        $query->with('tags');
+        $query->with('media');
+        $query->with('warehouse');
+
+        $find = $query->first();
+
 
         if (!$find) {
             return $this->error(null, 'Product not found', 404);
@@ -99,8 +106,9 @@ class ProductController extends Controller
             'description' => $request->description ?? $find->description,
             'mm_description' => $request->mm_description ?? $find->mm_description,
             'status' => $request->status ?? $find->status,
-            'tags' => $request->tags ?? $find->status,
+            'tags' => $request->tags ?? $find->tags,
             'media' => $request->media ?? $find->media,
+            'warehouses' => $request->warehouses ?? $find->warehouses,
             'last_updated_user_id' => null
         ];
 
