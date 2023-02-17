@@ -2,6 +2,7 @@
 
 namespace App\Http\Resources;
 
+use App\Http\Resources\MediaResource;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Resources\Json\JsonResource;
 
@@ -21,7 +22,7 @@ class SubSubCategoryResource extends JsonResource
             'name' => $this->name,
             'mm_name' => $this->mm_name,
             'slug' => $this->slug,
-            'image' => $this->image ? Storage::disk('public')->url($this->image) : null,
+            'image' => new MediaResource($this->media),
             'highlight_flag' => $this->highlight_flag,
             'created_at' => date('d-m-Y h:i:s', strtotime($this->created_at)),
             'updated_at' => date('d-m-Y h:i:s', strtotime($this->updated_at))
