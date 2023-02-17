@@ -13,7 +13,7 @@ class Category extends Model
     use HasFactory;
     use SoftDeletes;
 
-    protected $fillable = ['name','mm_name','slug','parent_id','image'];
+    protected $fillable = ['name','mm_name','slug','parent_id','media_id'];
 
     protected $hidden = [
         'parent_id',
@@ -29,6 +29,10 @@ class Category extends Model
     //     );
     // }
 
+    public function media()
+    {
+        return $this->belongsTo(Media::class,'media_id');
+    }
 
     public function subcategory()
     {

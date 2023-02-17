@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('mm_name');
             $table->string('slug');
-            $table->string('image')->nullable();
+            $table->unsignedBigInteger('media_id')->nullable();
             $table->unsignedBigInteger('parent_id')->nullable();
             $table->timestamps();
         });

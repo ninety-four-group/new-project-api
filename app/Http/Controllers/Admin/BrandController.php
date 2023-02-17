@@ -46,11 +46,12 @@ class BrandController extends Controller
         $data = [
             'name' => $request->name,
             'slug' => Str::slug($request->name),
+            'image' => $request->image,
         ];
 
-        if ($request->hasFile('image')) {
-            $data['image'] = $request->file('image')->store('brand', 'public');
-        }
+        // if ($request->hasFile('image')) {
+        //     $data['image'] = $request->file('image')->store('brand', 'public');
+        // }
 
         $brand = $this->brand->store($data);
 
@@ -88,15 +89,16 @@ class BrandController extends Controller
         $data = [
             'name' => $request->name ?? $brand->name,
             'slug' => $request->name ? Str::slug($request->name) : $brand->slug,
+            'image' => $request->image,
         ];
 
-        if ($request->hasFile('image')) {
-            if ($brand->image) {
-                Storage::disk('public')->delete($brand->image);
-            }
+        // if ($request->hasFile('image')) {
+        //     if ($brand->image) {
+        //         Storage::disk('public')->delete($brand->image);
+        //     }
 
-            $data['image'] = $request->file('image')->store('brand', 'public');
-        }
+        //     $data['image'] = $request->file('image')->store('brand', 'public');
+        // }
 
 
         $update = $this->brand->update($id, $data);

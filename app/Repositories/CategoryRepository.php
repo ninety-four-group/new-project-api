@@ -65,7 +65,14 @@ class CategoryRepository implements CategoryInterface
     public function store(array $data)
     {
         $category = Category::create($data);
-        return new CategoryResource($category);
+        $query = Category::whereId($category->id);
+        $query->with('subcategory');
+        $query->with('subcategory.subcategory');
+        $query->with('parent');
+        $query->with('media');
+        $find = $query->first();
+
+        return new CategoryResource($find);
     }
 
     public function update($id, array $data)

@@ -51,11 +51,13 @@ class CategoryController extends Controller
             'slug' => Str::slug($request->name),
             'parent_id' => $request->parent_id,
             'highlight_flag' => $request->highlight_flag,
+            'media_id' => $request->image,
         ];
 
-        if ($request->hasFile('image')) {
-            $data['image'] = $request->file('image')->store('category', 'public');
-        }
+
+        // if ($request->hasFile('image')) {
+        //     $data['image'] = $request->file('image')->store('category', 'public');
+        // }
 
         $category = $this->category->store($data);
 
@@ -96,15 +98,17 @@ class CategoryController extends Controller
             'slug' => $request->name ? Str::slug($request->name) : $category->slug,
             'parent_id' => $request->parent_id ?? $category->parent_id,
             'highlight_flag' => $request->highlight_flag ?? $category->highlight_flag,
+            'media_id' => $request->image,
+
         ];
 
-        if ($request->hasFile('image')) {
-            if ($category->image) {
-                Storage::disk('public')->delete($category->image);
-            }
+        // if ($request->hasFile('image')) {
+        //     if ($category->image) {
+        //         Storage::disk('public')->delete($category->image);
+        //     }
 
-            $data['image'] = $request->file('image')->store('category', 'public');
-        }
+        //     $data['image'] = $request->file('image')->store('category', 'public');
+        // }
 
 
         $update = $this->category->update($id, $data);

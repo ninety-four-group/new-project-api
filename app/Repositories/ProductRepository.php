@@ -61,6 +61,7 @@ class ProductRepository implements ProductInterface
         if ($data['tags']) {
             $product->tags()->sync($data['tags']);
         }
+        
         if ($data['media']) {
             $product->media()->sync($data['media']);
         }

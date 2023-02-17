@@ -25,7 +25,7 @@ class CategoryResource extends JsonResource
             'name' => $this->name,
             'mm_name' => $this->mm_name,
             'slug' => $this->slug,
-            'image' => Storage::disk('public')->url($this->image),
+            'image' => new MediaResource($this->media),
             'highlight_flag' => $this->highlight_flag,
             'subcategory' => SubCategoryResource::collection($this->subcategory),
             'created_at' => date('d-m-Y h:i:s', strtotime($this->created_at)),
