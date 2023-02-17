@@ -98,7 +98,7 @@ class CategoryController extends Controller
             'slug' => $request->name ? Str::slug($request->name) : $category->slug,
             'parent_id' => $request->parent_id ?? $category->parent_id,
             'highlight_flag' => $request->highlight_flag ?? $category->highlight_flag,
-            'media_id' => $request->image,
+            'media_id' => $request->image ?? $category->media_id,
 
         ];
 

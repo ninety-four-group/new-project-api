@@ -20,7 +20,7 @@ class BrandResource extends JsonResource
             'id' => $this->id,
             'name' => $this->name,
             'slug' => $this->slug,
-            'image' => Storage::disk('public')->url($this->image),
+            'image' => new MediaResource($this->media),
             'created_at' => date('d-m-Y h:i:s', strtotime($this->created_at)),
             'updated_at' => date('d-m-Y h:i:s', strtotime($this->updated_at))
         ];

@@ -13,8 +13,12 @@ class Brand extends Model
     use SoftDeletes;
     use HasFactory;
 
-    protected $fillable = ['name','slug','image'];
+    protected $fillable = ['name','slug','media_id'];
 
+    public function media()
+    {
+        return $this->belongsTo(Media::class,'media_id');
+    }
     // protected function image(): Attribute
     // {
     //     return Attribute::make(

@@ -36,7 +36,11 @@ class BrandRepository implements BrandInterface
     public function store(array $data)
     {
         $brand = Brand::create($data);
-        return new BrandResource($brand);
+
+        $query = Brand::whereId($brand->id);
+        $query->with('media');
+        $find = $query->first();
+        return new BrandResource($find);
     }
 
     public function update($id, array $data)
@@ -46,9 +50,12 @@ class BrandRepository implements BrandInterface
 
         $brand->name = $data['name'];
         $brand->slug = $data['slug'];
-        $brand->image = $data['image'] ?? $brand->image;
+        $brand->media_id = $data['media_id'] ?? $brand->media_id;
 
         $brand->update();
+
+        $brand->with('media');
+        
         return new BrandResource($brand);
     }
 

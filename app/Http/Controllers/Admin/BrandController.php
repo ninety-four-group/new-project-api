@@ -46,7 +46,7 @@ class BrandController extends Controller
         $data = [
             'name' => $request->name,
             'slug' => Str::slug($request->name),
-            'image' => $request->image,
+            'media_id' => $request->image,
         ];
 
         // if ($request->hasFile('image')) {
@@ -89,7 +89,7 @@ class BrandController extends Controller
         $data = [
             'name' => $request->name ?? $brand->name,
             'slug' => $request->name ? Str::slug($request->name) : $brand->slug,
-            'image' => $request->image,
+            'media_id' => $request->image ?? $brand->media_id,
         ];
 
         // if ($request->hasFile('image')) {

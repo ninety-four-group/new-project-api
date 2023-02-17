@@ -83,7 +83,7 @@ class CategoryRepository implements CategoryInterface
         $category->mm_name = $data['mm_name'];
         $category->parent_id = $data['parent_id'];
         $category->slug = $data['slug'];
-        $category->image = $data['image'] ?? $category->image;
+        $category->media_id = $data['media_id'] ?? $category->media_id;
 
         $category->update();
         return new CategoryResource($category);
