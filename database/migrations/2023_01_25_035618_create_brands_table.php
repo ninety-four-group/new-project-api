@@ -16,7 +16,7 @@ return new class () extends Migration {
             $table->id();
             $table->string('name');
             $table->string('slug');
-            $table->unsignedBigInteger('image')->nullable();
+            $table->unsignedBigInteger('media_id')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });
