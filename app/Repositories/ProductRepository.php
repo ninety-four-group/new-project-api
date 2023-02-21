@@ -29,9 +29,10 @@ class ProductRepository implements ProductInterface
         $query->with('lastUpdatedUser');
         $query->with('media');
         $query->with('tags');
+        $query->with('sku');
+        $query->with('sku.variation');
 
         $data = $query->paginate($limit);
-
         return ProductResource::collection($data)->additional(['meta' => [
             'total_page' => (int) ceil($data->total() / $data->perPage()),
         ]])->response()->getData();
@@ -61,7 +62,7 @@ class ProductRepository implements ProductInterface
         if ($data['tags']) {
             $product->tags()->sync($data['tags']);
         }
-        
+
         if ($data['media']) {
             $product->media()->sync($data['media']);
         }
@@ -84,7 +85,7 @@ class ProductRepository implements ProductInterface
     public function update($id, array $data)
     {
         $find = Product::whereId($id)->first();
-        
+
         if ($data['tags']) {
             $find->tags()->sync($data['tags']);
         }
@@ -100,7 +101,7 @@ class ProductRepository implements ProductInterface
         $find->with('brand');
         $find->with('lastUpdatedUser');
         $find->with('media');
-   
+
 
         $find->name = $data['name'];
         $find->mm_name = $data['mm_name'];
@@ -112,7 +113,7 @@ class ProductRepository implements ProductInterface
         $find->status = $data['status'];
 
         $find->update();
-      
+
         return new ProductResource($find);
     }
 
