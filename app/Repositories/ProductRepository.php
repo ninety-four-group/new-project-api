@@ -24,6 +24,15 @@ class ProductRepository implements ProductInterface
             $query->orWhere('mm_name', 'LIKE', "%{$search}%");
         }
 
+        if($request->warehouse_id){
+            $warehouseId = $request->warehouse_id;
+
+            $query->whereHas('warehouse',function($query) use($warehouseId){
+                $query->where('product_warehouses.warehouse_id',$warehouseId);
+            });
+        }
+
+
         $query->with('category');
         $query->with('brand');
         $query->with('lastUpdatedUser');
@@ -33,6 +42,8 @@ class ProductRepository implements ProductInterface
         $query->with('sku.variation');
 
         $data = $query->paginate($limit);
+
+
         return ProductResource::collection($data)->additional(['meta' => [
             'total_page' => (int) ceil($data->total() / $data->perPage()),
         ]])->response()->getData();
