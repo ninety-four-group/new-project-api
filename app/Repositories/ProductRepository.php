@@ -40,6 +40,7 @@ class ProductRepository implements ProductInterface
         $query->with('tags');
         $query->with('sku');
         $query->with('sku.variation');
+        $query->with('sku.warehouse');
 
         $data = $query->paginate($limit);
 

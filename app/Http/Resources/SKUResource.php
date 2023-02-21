@@ -16,6 +16,17 @@ class SKUResource extends JsonResource
     {
         return parent::toArray($request);
 
-
+        return [
+            'id' => $this->id,
+            'warehouse' => $this->warehouse,
+            'variation' => $this->variation,
+            'quantity' => $this->quantity,
+            'price' => $this->price,
+            'status' => $this->status,
+            'created_at' => $this->created_at,
+            'updated_at' => $this->updated_at,
+            'deleted_at' => $this->deleted_at,
+            'last_updated_user_id' => $this->last_updated_user_id,
+        ];
     }
 }
