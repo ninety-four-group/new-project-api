@@ -21,7 +21,7 @@ class SKUResource extends JsonResource
             'variation' => $this->variation,
             'quantity' => $this->quantity,
             'price' => $this->price,
-            'product' => $this->product,
+            'product' => new SKUProductResource($this->product),
             'status' => $this->status,
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,

@@ -2,10 +2,9 @@
 
 namespace App\Http\Resources;
 
-use App\Http\Resources\SKUResource;
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class ProductResource extends JsonResource
+class SKUProductResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -15,6 +14,7 @@ class ProductResource extends JsonResource
      */
     public function toArray($request)
     {
+     
         return [
             'id' => $this->id,
             'name' => $this->name,
@@ -27,8 +27,6 @@ class ProductResource extends JsonResource
             'status' => $this->status,
             'media' => MediaResource::collection($this->media),
             'tags' => TagResource::collection($this->tags),
-            'sku' => SKUResource::collection($this->sku),
-            'warehouses' => WarehouseResource::collection($this->warehouse),
             'last_updated_user' => $this->last_updated_user,
             'created_at' => date('d-m-Y h:i:s', strtotime($this->created_at)),
             'updated_at' => date('d-m-Y h:i:s', strtotime($this->updated_at))
