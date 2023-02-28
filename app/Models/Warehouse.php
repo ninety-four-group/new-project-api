@@ -12,4 +12,6 @@ class Warehouse extends Model
     use SoftDeletes;
 
     protected $fillable = ['name','slug','warehouse'];
+
+   
 }

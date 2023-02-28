@@ -24,12 +24,12 @@ class StockKeepingUnit extends Model
 
     public function variations()
     {
-        return $this->hasMany(SkuVariation::class,'sku_id');
+        return $this->hasOne(SkuVariation::class,'sku_id');
     }
 
     public function warehouses()
     {
-        return $this->hasMany(SkuWarehouse::class,'warehouse_id');
+        return $this->hasOne(SkuWarehouse::class,'sku_id');
     }
 
 }

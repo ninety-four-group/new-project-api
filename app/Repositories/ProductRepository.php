@@ -40,10 +40,11 @@ class ProductRepository implements ProductInterface
         $query->with('sku');
         $query->with('sku.variations');
         $query->with('sku.variations.variation');
+        // $query->with('sku.variations.warehouse');
         $query->with('sku.warehouses');
+        $query->with('sku.warehouses.warehouse');
 
         $data = $query->paginate($limit);
-
 
         return ProductResource::collection($data)->additional(['meta' => [
             'total_page' => (int) ceil($data->total() / $data->perPage()),
@@ -58,6 +59,12 @@ class ProductRepository implements ProductInterface
         $query->with('lastUpdatedUser');
         $query->with('media');
         $query->with('tags');
+        $query->with('sku');
+        $query->with('sku.variations');
+        $query->with('sku.variations.variation');
+        $query->with('sku.variations.warehouse');
+        $query->with('sku.warehouses');
+        $query->with('sku.warehouses.warehouse');
         $data = $query->first();
 
         if (!$data) {
