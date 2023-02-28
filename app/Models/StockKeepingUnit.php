@@ -29,7 +29,7 @@ class StockKeepingUnit extends Model
 
     public function warehouses()
     {
-        return $this->hasMany(SkuWarehouse::class,'sku_id');
+        return $this->hasMany(SkuWarehouse::class,'warehouse_id');
     }
 
 }

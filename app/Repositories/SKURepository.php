@@ -25,8 +25,8 @@ class SKURepository implements SKUInterface
             $query->where('name', 'LIKE', "%{$search}%");
         }
 
-        $query->with('warehouse');
-        $query->with('variation');
+        $query->with('warehouses');
+        $query->with('variations');
         $query->with('product');
 
 
@@ -53,11 +53,8 @@ class SKURepository implements SKUInterface
     {
         $sku = StockKeepingUnit::create($data);
 
-        SkuWarehouse::create(['sku_id' => $sku['id'] , 'warehouse_id' => $data['warehouse'] ,'quantity' => $warehouse['quantity']]);
-
-        if($data['variation']){
-            SkuVariation::create(['sku_id' => $sku['id'],'variation_id' => $data['variation']]);
-        }
+        SkuWarehouse::create(['sku_id' => $sku['id'] , 'warehouse_id' => $data['warehouse_id'] ,'quantity' => $data['quantity']]);
+        SkuVariation::create(['sku_id' => $sku['id'],'variation_id' => $data['variation_id']]);
 
         return new SKUResource($sku);
     }
@@ -66,25 +63,18 @@ class SKURepository implements SKUInterface
     {
         $find = StockKeepingUnit::find($id);
 
-        if($data['warehouses']){
-            foreach ($data['warehouses'] as  $warehouse) {
-                $checkWarehouse = SkuWarehouse::where('sku_id',$id)->where('warehouse_id' , $warehouse['id'])->first();
-                if($checkWarehouse){
-                    $checkWarehouse->quantity += $warehouse['quantity'];
-                    $checkWarehouse->update();
-                }else{
-                    SkuWarehouse::create(['sku_id' => $find['id'] , 'warehouse_id' => $warehouse['id'] ,'quantity' => $warehouse['quantity']]);
-                }
-            }
+        $checkWarehouse = SkuWarehouse::where('sku_id', $id)->where('warehouse_id', $data['warehouse_id'])->first();
+        if ($checkWarehouse) {
+            $checkWarehouse->quantity += $data['quantity'];
+            $checkWarehouse->update();
+        } else {
+            SkuWarehouse::create(['sku_id' => $find['id'] , 'warehouse_id' => $data['warehouse_id'] ,'quantity' => $data['quantity']]);
         }
 
-        if($data['variation']){
-            $checkVariation = SkuVariation::where('sku_id',$id)->where('variation_id' ,$data['variation'])->first();
-            if(!$checkVariation){
-                SkuVariation::create(['sku_id' => $find['id'],'variation_id' => $data['variation']]);
-            }
+        $checkVariation = SkuVariation::where('sku_id', $id)->where('variation_id', $data['variation_id'])->first();
+        if (!$checkVariation) {
+            SkuVariation::create(['sku_id' => $find['id'],'variation_id' => $data['variation_id']]);
         }
-
 
         $find->update($data);
         return new SKUResource($find);
