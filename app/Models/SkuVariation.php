@@ -6,9 +6,14 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class VariationCategory extends Model
+class SkuVariation extends Model
 {
     use HasFactory,SoftDeletes;
 
-    protected $fillable = ['name'];
+    protected $fillable = ['sku_id','variation_id'];
+
+    public function variation()
+    {
+        return $this->belongsTo(Variation::class,'variation_id');
+    }
 }

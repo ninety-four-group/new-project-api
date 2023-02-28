@@ -25,8 +25,6 @@ class StoreVariationRequest extends FormRequest
     {
         return [
             'name' => ['sometimes','string','max:255'],
-            'variation_category_id' => ['sometimes','string','max:255'],
-            'image' => ['sometimes','image','mimes:png,jpg,jpeg','max:10240'] //max : 10MB
         ];
     }
 }

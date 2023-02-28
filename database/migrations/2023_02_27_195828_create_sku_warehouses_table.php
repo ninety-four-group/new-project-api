@@ -13,12 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('variations', function (Blueprint $table) {
+        Schema::create('sku_warehouses', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('variation_category_id');
-            $table->string('name');
-            $table->text('image')->nullable();
-            $table->foreign('variation_category_id')->references('id')->on('variation_categories');
+            $table->unsignedBigInteger('sku_id');
+            $table->unsignedBigInteger('warehouse_id');
+            $table->integer('quantity')->default(0);
+            $table->foreign('sku_id')->references('id')->on('stock_keeping_units');
+            $table->foreign('warehouse_id')->references('id')->on('warehouses');
             $table->softDeletes();
             $table->timestamps();
         });
@@ -31,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('variations');
+        Schema::dropIfExists('sku_warehouses');
     }
 };

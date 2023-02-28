@@ -27,7 +27,7 @@ class ProductResource extends JsonResource
             'status' => $this->status,
             'media' => MediaResource::collection($this->media),
             'tags' => TagResource::collection($this->tags),
-            'sku' => SKUResource::collection($this->sku),
+            'sku' => ProductSKUResource::collection($this->sku),
             'warehouses' => WarehouseResource::collection($this->warehouse),
             'last_updated_user' => $this->last_updated_user,
             'created_at' => date('d-m-Y h:i:s', strtotime($this->created_at)),

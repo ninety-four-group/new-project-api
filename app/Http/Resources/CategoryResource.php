@@ -28,8 +28,8 @@ class CategoryResource extends JsonResource
             'image' => new MediaResource($this->media),
             'highlight_flag' => $this->highlight_flag,
             'subcategory' => SubCategoryResource::collection($this->subcategory),
-            'created_at' => date('d-m-Y h:i:s', strtotime($this->created_at)),
-            'updated_at' => date('d-m-Y h:i:s', strtotime($this->updated_at))
+            'created_at' =>$this->created_at,
+            'updated_at' =>$this->updated_at
         ];
     }
 }

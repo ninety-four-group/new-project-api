@@ -11,10 +11,10 @@ class Variation extends Model
     use HasFactory;
     use SoftDeletes;
 
-    protected $fillable = ['name','variation_category_id','image','type','type_value'];
+    protected $fillable = ['name','media_id','type','type_value'];
 
-    public function variationCategory()
+    public function media()
     {
-        return $this->belongsTo(VariationCategory::class, 'variation_category_id');
+        return $this->belongsTo(Media::class, 'media_id');
     }
 }

@@ -42,13 +42,14 @@ class SKUController extends Controller
     public function store(StoreSKURequest $request)
     {
         $data = [
-            'variation_id' => $request->variation_id,
-            'warehouse_id' => $request->warehouse_id,
             'product_id' => $request->product_id,
             'quantity' => $request->quantity,
             'price' => $request->price,
             'status' => $request->status,
+            'warehouse' => $request->warehouse,
+            'variation' => $request->variation,
         ];
+
 
         $save = $this->interface->store($data);
 
@@ -84,8 +85,8 @@ class SKUController extends Controller
         }
 
         $data = [
-            'variation_id' => $request->variation_id ?? $find->variation_id,
-            'warehouse_id' => $request->warehouse_id  ?? $find->warehouse_id,
+            'warehouses' => $request->warehouses,
+            'variation' => $request->variation,
             'product_id' => $request->product_id  ?? $find->product_id,
             'quantity' => $request->quantity  ?? $find->quantity,
             'price' => $request->price  ?? $find->price,

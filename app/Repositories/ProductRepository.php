@@ -32,15 +32,15 @@ class ProductRepository implements ProductInterface
             });
         }
 
-
         $query->with('category');
         $query->with('brand');
         $query->with('lastUpdatedUser');
         $query->with('media');
         $query->with('tags');
         $query->with('sku');
-        $query->with('sku.variation');
-        $query->with('sku.warehouse');
+        $query->with('sku.variations');
+        $query->with('sku.variations.variation');
+        $query->with('sku.warehouses');
 
         $data = $query->paginate($limit);
 

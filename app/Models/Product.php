@@ -50,11 +50,7 @@ class Product extends Model
         return $this->belongsToMany(Tag::class, 'product_tags', 'product_id', 'tag_id');
     }
 
-    /**
-     * Get all of the sku for the Product
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     */
+    
     public function sku()
     {
         return $this->hasMany(StockKeepingUnit::class, 'product_id', 'id');

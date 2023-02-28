@@ -24,7 +24,7 @@ class VariationRepository implements VariationInterface
             $query->where('name', 'LIKE', "%{$search}%");
         }
 
-        $query->with('variationCategory');
+        $query->with('media');
 
         $data = $query->paginate($limit);
 
@@ -59,10 +59,9 @@ class VariationRepository implements VariationInterface
         $find = Variation::find($id);
 
         $find->name = $data['name'];
-        $find->variation_category_id = $data['variation_category_id'];
         $find->type = $data['type'];
         $find->type_value = $data['type_value'];
-        $find->image = $data['image'] ?? $find->image;
+        $find->media_id = $data['media_id'] ?? $find->media_id;
         $find->update();
         return new VariationResource($find);
     }

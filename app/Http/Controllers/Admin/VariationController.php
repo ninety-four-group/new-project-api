@@ -44,14 +44,10 @@ class VariationController extends Controller
     {
         $data = [
             'name' => $request->name,
-            'variation_category_id' => $request->variation_category_id,
             'type' => $request->type,
             'type_value' => $request->type_value,
+            'media_id' => $request->media_id,
         ];
-
-        if ($request->hasFile('image')) {
-            $data['image'] = $request->file('image')->store('variation', 'public');
-        }
 
         $save = $this->interface->store($data);
 
@@ -88,18 +84,10 @@ class VariationController extends Controller
 
         $data = [
             'name' => $request->name ?? $find->name,
-            'variation_category_id' => $request->variation_category_id ?? $find->variation_category_id,
             'type' => $request->type ?? $find->type,
             'type_value' => $request->type_value ?? $find->type_value,
+            'media_id' => $request->media_id ?? $find->media_id,
         ];
-
-        if ($request->hasFile('image')) {
-            if ($find->image) {
-                Storage::disk('public')->delete($find->image);
-            }
-
-            $data['image'] = $request->file('image')->store('variation', 'public');
-        }
 
 
         $update = $this->interface->update($id, $data);

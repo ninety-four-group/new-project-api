@@ -24,11 +24,11 @@ class StoreSKURequest extends FormRequest
     public function rules()
     {
         return [
-            'variation_id' => ['required','string','max:255'],
-            'warehouse_id' => ['required','string','max:255'],
             'product_id' => ['required','string','max:255'],
             'quantity' => ['required','integer'],
             'price' => ['required'],
+            'warehouse' => ['required'],
+            'variation' => ['required']
         ];
     }
 }
