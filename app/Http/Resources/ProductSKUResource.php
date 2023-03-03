@@ -21,7 +21,7 @@ class ProductSKUResource extends JsonResource
             'quantity' => $this->quantity,
             'price' => $this->price,
             'status' => $this->status,
-            'stock' => StockResource::collection($this->warehouses),
+            // 'stock' => StockResource::collection($this->warehouses),
             'variations' => $this->variations,
             'status' => $this->status,
             'deleted_at' => $this->deleted_at,

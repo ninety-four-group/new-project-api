@@ -24,6 +24,10 @@ class VariationRepository implements VariationInterface
             $query->where('name', 'LIKE', "%{$search}%");
         }
 
+        if ($request->type) {
+            $query->where('type', $request->type);
+        }
+
         $query->with('media');
 
         $data = $query->paginate($limit);

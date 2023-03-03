@@ -38,6 +38,9 @@ class ProductRepository implements ProductInterface
         $query->with('media');
         $query->with('tags');
         $query->with('sku');
+        $query->with('sku.variations.variation');
+        $query->with('stock');
+        // $query->with('sku.variations.warehouse');
         $query->with('sku.warehouses');
         $query->with('sku.warehouses.warehouse');
         $query->with('sku.warehouses.sku');

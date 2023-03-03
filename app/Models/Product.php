@@ -54,5 +54,10 @@ class Product extends Model
     {
         return $this->hasMany(StockKeepingUnit::class, 'product_id', 'id');
     }
+
+    public function stock()
+    {
+        return $this->hasMany(SkuWarehouse::class, 'product_id', 'id');
+    }
   
 }
