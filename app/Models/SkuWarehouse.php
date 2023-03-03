@@ -14,14 +14,14 @@ class SkuWarehouse extends Model
 
     protected $fillable = ['warehouse_id','sku_id','quantity'];
 
+    public function sku()
+    {
+        return $this->belongsTo(StockKeepingUnit::class,'sku_id','id');
+    }
+
     public function warehouse()
     {
         return $this->belongsTo(Warehouse::class,'warehouse_id');
-    }
-
-    public function sku()
-    {
-        return $this->belongTo(StockKeepingUnit::class,'sku_id');
     }
 
 }

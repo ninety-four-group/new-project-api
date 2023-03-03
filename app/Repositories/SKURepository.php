@@ -52,8 +52,14 @@ class SKURepository implements SKUInterface
     {
         $sku = StockKeepingUnit::create($data);
 
-        SkuWarehouse::create(['sku_id' => $sku['id'] , 'warehouse_id' => $data['warehouse_id'] ,'quantity' => $data['quantity']]);
-        SkuVariation::create(['sku_id' => $sku['id'],'variation_id' => $data['variation_id'],'warehouse_id' => $data['warehouse_id']]);
+        // SkuWarehouse::create(['sku_id' => $sku['id'] , 'warehouse_id' => $data['warehouse_id'] ,'quantity' => $data['quantity']]);
+
+        foreach ($data['variations'] as $variation) {
+            $checkVariation = SkuVariation::where('sku_id',$sku['id'])->where('variation_id',$variation)->first();
+            if(!$checkVariation){
+                SkuVariation::create(['sku_id' => $sku['id'],'variation_id' => $variation]);
+            }
+        }
 
         return new SKUResource($sku);
     }
@@ -62,13 +68,13 @@ class SKURepository implements SKUInterface
     {
         $find = StockKeepingUnit::find($id);
 
-        $checkWarehouse = SkuWarehouse::where('sku_id', $id)->where('warehouse_id', $data['warehouse_id'])->first();
-        if ($checkWarehouse) {
-            $checkWarehouse->quantity += $data['quantity'];
-            $checkWarehouse->update();
-        } else {
-            SkuWarehouse::create(['sku_id' => $find['id'] , 'warehouse_id' => $data['warehouse_id'] ,'quantity' => $data['quantity']]);
-        }
+        // $checkWarehouse = SkuWarehouse::where('sku_id', $id)->where('warehouse_id', $data['warehouse_id'])->first();
+        // if ($checkWarehouse) {
+        //     $checkWarehouse->quantity += $data['quantity'];
+        //     $checkWarehouse->update();
+        // } else {
+        //     SkuWarehouse::create(['sku_id' => $find['id'] , 'warehouse_id' => $data['warehouse_id'] ,'quantity' => $data['quantity']]);
+        // }
 
         $checkVariation = SkuVariation::where('sku_id', $id)->where('variation_id', $data['variation_id'])->first();
         if (!$checkVariation) {

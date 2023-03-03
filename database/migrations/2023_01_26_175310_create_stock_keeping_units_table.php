@@ -14,6 +14,7 @@ return new class () extends Migration {
     {
         Schema::create('stock_keeping_units', function (Blueprint $table) {
             $table->id();
+            $table->string('code')->uniqid();
             $table->unsignedBigInteger('product_id');
             $table->unsignedBigInteger("last_updated_user_id")->nullable();
             $table->integer('quantity');

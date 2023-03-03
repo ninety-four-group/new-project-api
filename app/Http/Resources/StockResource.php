@@ -4,7 +4,7 @@ namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class ProductSKUResource extends JsonResource
+class StockResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -14,19 +14,15 @@ class ProductSKUResource extends JsonResource
      */
     public function toArray($request)
     {
-        // return parent::toArray($request);
         return [
             'id' => $this->id,
-            'last_updated_user_id' => $this->last_updated_user_id,
             'quantity' => $this->quantity,
-            'price' => $this->price,
-            'status' => $this->status,
-            'stock' => StockResource::collection($this->warehouses),
-            'variations' => $this->variations,
-            'status' => $this->status,
-            'deleted_at' => $this->deleted_at,
+            'warehouse' => $this->warehouse,
+            'sku' => $this->sku,
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,
+            'deleted_at' => $this->deleted_at,
         ];
+
     }
 }

@@ -43,11 +43,11 @@ class SKUController extends Controller
     {
         $data = [
             'product_id' => $request->product_id,
+            'code' => $request->code,
             'quantity' => $request->quantity,
             'price' => $request->price,
             'status' => $request->status,
-            'warehouse_id' => $request->warehouse_id,
-            'variation_id' => $request->variation_id,
+            'variations' => $request->variations,
         ];
 
 
@@ -85,10 +85,10 @@ class SKUController extends Controller
         }
 
         $data = [
-            'warehouse_id' => $request->warehouse_id,
-            'variation_id' => $request->variation_id,
+            'variations' => $request->variations,
             'product_id' => $request->product_id  ?? $find->product_id,
             'quantity' => $request->quantity  ?? $find->quantity,
+            'code' => $request->code ?? $find->code,
             'price' => $request->price  ?? $find->price,
             'status' => $request->status  ?? $find->status,
         ];

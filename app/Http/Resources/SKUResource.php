@@ -17,7 +17,7 @@ class SKUResource extends JsonResource
 
         return [
             'id' => $this->id,
-            'warehouses' => $this->warehouses,
+            'code' => $this->code,
             'variations' => $this->variations,
             'quantity' => $this->quantity,
             'price' => $this->price,
