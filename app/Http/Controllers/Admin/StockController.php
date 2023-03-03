@@ -18,9 +18,23 @@ class StockController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+        $search = $request->query('search');
+        $limit = $request->query('limit', 10);
+
+        $query = SkuWarehouse::query();
+
+        // $query->with('warehouses');
+        // $query->with('variations');
+        // $query->with('variations.variation');
+        // $query->with('product');
+
+        $data = $query->paginate($limit);
+
+        return $this->success(StockResource::collection($data)->additional(['meta' => [
+            'total_page' => (int) ceil($data->total() / $data->perPage()),
+        ]])->response()->getData(), 'Stock List');
     }
 
     /**
@@ -90,16 +104,18 @@ class StockController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $checkWarehouse = SkuWarehouse::where('product_id',$request->product_id)->where('sku_id', $request->sku_id)->where('warehouse_id', $request->warehouse_id)->first();
-       
-        if ($checkWarehouse) {
-            $checkWarehouse->quantity += $request->quantity;
-            $checkWarehouse->update();
-            return $this->success($checkWarehouse, 'Successfully Updated');
-        } else {
-            $save = SkuWarehouse::create(['product_id' => $request->product_id , 'sku_id' => $request->sku_id , 'warehouse_id' => $request->warehouse_id,'quantity' =>$request->quantity]);
-            return $this->success($save, 'Successfully Created');
+        $find = SkuWarehouse::find($id);
+
+        if (!$find) {
+            return $this->error(null, 'Stock not found', 404);
         }
+
+        $find->product_id = $request->product_id ?? $find->product_id;
+        $find->warehouse_id = $request->warehouse_id ?? $find->warehouse_id;
+        $find->sku_id = $request->sku_id ?? $find->sku_id;
+        $find->quantity = $request->quantity ?? $find->quantity;
+        $find->update();
+        return $this->success($find, 'Successfully Updated');
     }
 
     /**

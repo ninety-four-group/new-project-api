@@ -68,15 +68,6 @@ class SKURepository implements SKUInterface
     public function update($id, array $data)
     {
         $find = StockKeepingUnit::find($id);
-
-        // $checkWarehouse = SkuWarehouse::where('sku_id', $id)->where('warehouse_id', $data['warehouse_id'])->first();
-        // if ($checkWarehouse) {
-        //     $checkWarehouse->quantity += $data['quantity'];
-        //     $checkWarehouse->update();
-        // } else {
-        //     SkuWarehouse::create(['sku_id' => $find['id'] , 'warehouse_id' => $data['warehouse_id'] ,'quantity' => $data['quantity']]);
-        // }
-      
         $find->product_id = $data['product_id'];
         $find->code = $data['code'];
         $find->quantity = $data['quantity'];

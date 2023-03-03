@@ -17,7 +17,7 @@ class ProductSKUResource extends JsonResource
         // return parent::toArray($request);
         return [
             'id' => $this->id,
-            'last_updated_user_id' => $this->last_updated_user_id,
+            'code' => $this->code,
             'quantity' => $this->quantity,
             'price' => $this->price,
             'status' => $this->status,
@@ -27,6 +27,7 @@ class ProductSKUResource extends JsonResource
             'deleted_at' => $this->deleted_at,
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,
+            'last_updated_user_id' => $this->last_updated_user_id,
         ];
     }
 }
