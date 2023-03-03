@@ -27,6 +27,7 @@ class SKURepository implements SKUInterface
 
         $query->with('warehouses');
         $query->with('variations');
+        $query->with('variations.variation');
         $query->with('product');
 
         $data = $query->paginate($limit);

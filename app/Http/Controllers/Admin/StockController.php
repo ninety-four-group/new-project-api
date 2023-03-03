@@ -90,7 +90,16 @@ class StockController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $checkWarehouse = SkuWarehouse::where('product_id',$request->product_id)->where('sku_id', $request->sku_id)->where('warehouse_id', $request->warehouse_id)->first();
+       
+        if ($checkWarehouse) {
+            $checkWarehouse->quantity += $request->quantity;
+            $checkWarehouse->update();
+            return $this->success($checkWarehouse, 'Successfully Updated');
+        } else {
+            $save = SkuWarehouse::create(['product_id' => $request->product_id , 'sku_id' => $request->sku_id , 'warehouse_id' => $request->warehouse_id,'quantity' =>$request->quantity]);
+            return $this->success($save, 'Successfully Created');
+        }
     }
 
     /**

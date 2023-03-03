@@ -63,6 +63,9 @@ class ProductRepository implements ProductInterface
         $query->with('sku');
         $query->with('sku.variations.variation');
         $query->with('stock');
+        $query->with('stock.warehouse');
+        $query->with('stock.sku');
+        $query->with('stock.product');
         // $query->with('sku.variations.warehouse');
         $query->with('sku.warehouses');
         $query->with('sku.warehouses.warehouse');
