@@ -76,13 +76,20 @@ class SKURepository implements SKUInterface
         // } else {
         //     SkuWarehouse::create(['sku_id' => $find['id'] , 'warehouse_id' => $data['warehouse_id'] ,'quantity' => $data['quantity']]);
         // }
+      
+        $find->product_id = $data['product_id'];
+        $find->code = $data['code'];
+        $find->quantity = $data['quantity'];
+        $find->price = $data['price'];
+        $find->status = $data['status'];
+        $find->update();
 
-        $checkVariation = SkuVariation::where('sku_id', $id)->where('variation_id', $data['variation_id'])->first();
-        if (!$checkVariation) {
-            SkuVariation::create(['sku_id' => $find['id'],'variation_id' => $data['variation_id'],'warehouse_id' => $data['warehouse_id']]);
+        SkuVariation::where('sku_id',$id)->forceDelete();
+
+        foreach ($data['variations'] as $variation) {
+            SkuVariation::create(['sku_id' =>$id,'variation_id' => $variation]);
         }
-
-        $find->update($data);
+       
         return new SKUResource($find);
     }
 
