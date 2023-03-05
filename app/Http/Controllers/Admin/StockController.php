@@ -126,6 +126,13 @@ class StockController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $find = SkuWarehouse::find($id);
+
+        if (!$find) {
+            return $this->error(null, 'Stock not found', 404);
+        }
+
+        $find->delete();
+        return $this->success(null, 'Successfully delete');
     }
 }
