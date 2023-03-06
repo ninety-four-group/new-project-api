@@ -57,18 +57,18 @@ class SKURepository implements SKUInterface
         // SkuWarehouse::create(['sku_id' => $sku['id'] , 'warehouse_id' => $data['warehouse_id'] ,'quantity' => $data['quantity']]);
 
         foreach ($data['variations'] as $variation) {
-            $checkVariation = SkuVariation::where('sku_id',$sku['id'])->where('variation_id',$variation)->first();
-            if(!$checkVariation){
+            $checkVariation = SkuVariation::where('sku_id', $sku['id'])->where('variation_id', $variation)->first();
+            if (!$checkVariation) {
                 SkuVariation::create(['sku_id' => $sku['id'],'variation_id' => $variation]);
             }
 
-            $checkSort = ProductVariationType::where('product_id',$data['product_id'])->first();
-           
-            if(!$checkSort){
-               ProductVariationType::create(['product_id'=> $data['product_id'], 'type' => $variation]);
+            $variation = Variation::find($variation);
+
+            $checkSort = ProductVariationType::where('product_id', $data['product_id'])->where('type', $variation->type)->first();
+            if (!$checkSort) {
+                ProductVariationType::create(['product_id'=> $data['product_id'], 'type' => $variation->type]);
             }
         }
-
 
         return new SKUResource($sku);
     }
@@ -83,12 +83,12 @@ class SKURepository implements SKUInterface
         $find->status = $data['status'];
         $find->update();
 
-        SkuVariation::where('sku_id',$id)->forceDelete();
+        SkuVariation::where('sku_id', $id)->forceDelete();
 
         foreach ($data['variations'] as $variation) {
             SkuVariation::create(['sku_id' =>$id,'variation_id' => $variation]);
         }
-       
+
         return new SKUResource($find);
     }
 

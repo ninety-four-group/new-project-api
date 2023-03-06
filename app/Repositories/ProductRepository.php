@@ -112,8 +112,10 @@ class ProductRepository implements ProductInterface
         $find = Product::whereId($id)->first();
 
         if ($data['tags']) {
-            $find->tags()->sync($data['tags']);
+            $find->tags()->detach();
+            $find->tags()->attach($data['tags']);
         }
+
         if ($data['media']) {
             $find->media()->sync($data['media']);
         }

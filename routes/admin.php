@@ -42,6 +42,7 @@ Route::resource('variations', VariationController::class);
 Route::resource('sku', SKUController::class);
 Route::resource('stock', StockController::class);
 Route::get('products/{id}/variations',[ProductController::class,'getProductVariation']);
+Route::post('products/{id}/variations/sort',[ProductController::class,'sortProductVariation']);
 
 Route::resource('countries', CountryController::class);
 Route::resource('regions', RegionController::class);

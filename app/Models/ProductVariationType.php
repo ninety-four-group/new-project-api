@@ -9,12 +9,12 @@ class ProductVariationType extends Model
 {
     use HasFactory;
 
-    protected $fillable= ['product_id','variation_id','sort'];
+    protected $fillable= ['product_id','type','sort'];
 
     public function product()
     {
         return $this->belongsTo(Product::class,'product_id');
     }
 
-    
+
 }

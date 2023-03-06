@@ -107,7 +107,7 @@ class ProductController extends Controller
             'description' => $request->description ?? $find->description,
             'mm_description' => $request->mm_description ?? $find->mm_description,
             'status' => $request->status ?? $find->status,
-            'tags' => $request->tags ?? $find->tags,
+            'tags' => $request->tags,
             'media' => $request->media ?? $find->media,
             'warehouses' => $request->warehouses ?? $find->warehouses,
             'last_updated_user_id' => null
@@ -143,7 +143,19 @@ class ProductController extends Controller
 
     public function getProductVariation(Request $request)
     {
-        $variations = ProductVariationType::where('product_id',$request->id)->with('product')->with('variation')->get();
-        return $this->success($variations,'Variations List');
+        $variations = ProductVariationType::where('product_id', $request->id)->with('product')->orderBy('sort', 'asc')->get();
+        return $this->success($variations, 'Variations List');
+    }
+
+    public function sortProductVariation(Request $request)
+    {
+        $request->validate(['sort' => 'required']);
+
+        foreach ($request->sort as $each) {
+            ProductVariationType::where('id', $each['id'])->update(['sort'=>$each['sort']]);
+        }
+
+        return $this->success(null, 'Successfully updated');
+
     }
 }

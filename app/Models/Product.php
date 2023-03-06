@@ -59,5 +59,5 @@ class Product extends Model
     {
         return $this->hasMany(SkuWarehouse::class, 'product_id', 'id');
     }
-  
+
 }
