@@ -9,6 +9,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreProductRequest;
 use App\Http\Requests\UpdateProductRequest;
 use App\Models\Product;
+use App\Models\ProductVariationType;
 
 class ProductController extends Controller
 {
@@ -138,5 +139,11 @@ class ProductController extends Controller
 
         $find->delete();
         return $this->success(null, 'Successfully delete');
+    }
+
+    public function getProductVariation(Request $request)
+    {
+        $variations = ProductVariationType::where('product_id',$request->id)->with('product')->with('variation')->get();
+        return $this->success($variations,'Variations List');
     }
 }

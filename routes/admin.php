@@ -41,6 +41,7 @@ Route::resource('media', MediaController::class);
 Route::resource('variations', VariationController::class);
 Route::resource('sku', SKUController::class);
 Route::resource('stock', StockController::class);
+Route::get('products/{id}/variations',[ProductController::class,'getProductVariation']);
 
 Route::resource('countries', CountryController::class);
 Route::resource('regions', RegionController::class);

@@ -7,6 +7,7 @@ use App\Http\Resources\SKUResource;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\Http\Resources\VariationResource;
+use App\Models\ProductVariationType;
 use App\Models\SkuVariation;
 use App\Models\SkuWarehouse;
 use App\Models\StockKeepingUnit;
@@ -60,7 +61,14 @@ class SKURepository implements SKUInterface
             if(!$checkVariation){
                 SkuVariation::create(['sku_id' => $sku['id'],'variation_id' => $variation]);
             }
+
+            $checkSort = ProductVariationType::where('product_id',$data['product_id'])->first();
+           
+            if(!$checkSort){
+               ProductVariationType::create(['product_id'=> $data['product_id'], 'type' => $variation]);
+            }
         }
+
 
         return new SKUResource($sku);
     }

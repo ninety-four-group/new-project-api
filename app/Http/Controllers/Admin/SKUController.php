@@ -50,7 +50,6 @@ class SKUController extends Controller
             'variations' => $request->variations,
         ];
 
-
         $save = $this->interface->store($data);
 
         return $this->success($save, 'Successfully created');

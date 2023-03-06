@@ -8,6 +8,7 @@ use App\Traits\HttpResponses;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreStockRequest;
 use App\Http\Resources\StockResource;
+use App\Models\StockKeepingUnit;
 
 class StockController extends Controller
 {
@@ -57,11 +58,26 @@ class StockController extends Controller
     {
         $checkWarehouse = SkuWarehouse::where('product_id',$request->product_id)->where('sku_id', $request->sku_id)->where('warehouse_id', $request->warehouse_id)->first();
        
+        $checkSKU = StockKeepingUnit::where('product_id',$request->product_id)->where('id',$request->sku_id)->first();
+        $maxSKUQty = $checkSKU->quantity;
+        $comingTotalQty = 0;
+
         if ($checkWarehouse) {
+            $comingTotalQty = $checkWarehouse->quantity + $request->quantity;
+
+            if($comingTotalQty > $maxSKUQty){
+                return $this->error(null,'The maximum SKU total quantity is ' . $maxSKUQty);
+            }
             $checkWarehouse->quantity += $request->quantity;
             $checkWarehouse->update();
             return $this->success($checkWarehouse, 'Successfully Updated');
         } else {
+            $comingTotalQty = $request->quantity;
+
+            if($comingTotalQty > $maxSKUQty){
+                return $this->error(null,'The maximum SKU total quantity is ' . $maxSKUQty);
+            }
+            
             $save = SkuWarehouse::create(['product_id' => $request->product_id , 'sku_id' => $request->sku_id , 'warehouse_id' => $request->warehouse_id,'quantity' =>$request->quantity]);
             return $this->success($save, 'Successfully Created');
         }
