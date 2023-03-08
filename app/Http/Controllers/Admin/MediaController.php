@@ -13,6 +13,10 @@ use App\Http\Resources\MediaResource;
 use Illuminate\Support\Facades\Storage;
 use App\Http\Requests\StoreMediaRequest;
 use App\Http\Requests\UpdateMediaRequest;
+use App\Models\Category;
+use App\Models\Product;
+use App\Models\ProductMedia;
+use App\Models\Variation;
 
 class MediaController extends Controller
 {
@@ -159,6 +163,19 @@ class MediaController extends Controller
         if (!$data) {
             return $this->error(null, 'Media not found', 404);
         }
+
+        if(Category::where('media_id',$id)->exists()){
+            return $this->error(null,"Can not delete because this media is linked with some categories");
+        }
+
+        if(Variation::where('media_id',$id)->exists()){
+            return $this->error(null,"Can not delete because this media is linked with some variations");
+        }
+
+        if(ProductMedia::where('media_id',$id)->exists()){
+            return $this->error(null,"Can not delete because this media is linked with some products");
+        }
+
         Storage::disk('public')->delete('media/' . $data->file);
         Storage::disk('public')->delete('media/thumbnails/' . $data->file);
 

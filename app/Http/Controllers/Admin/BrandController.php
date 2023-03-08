@@ -11,6 +11,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Storage;
 use App\Http\Requests\StoreBrandRequest;
 use App\Http\Requests\UpdateBrandRequest;
+use App\Models\Product;
 
 class BrandController extends Controller
 {
@@ -120,6 +121,9 @@ class BrandController extends Controller
             return $this->error(null, 'Brand not found', 404);
         }
 
+        if(Product::where('brand_id',$id)->exists()){
+            return $this->error(null,"Can not delete because this brand is linked with some products");
+        }
         // if ($category->image) {
         //     Storage::delete($category->image);
         // }

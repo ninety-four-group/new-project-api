@@ -9,6 +9,8 @@ use App\Http\Controllers\Controller;
 use App\Contracts\WarehouseInterface;
 use App\Http\Requests\StoreWarehouseRequest;
 use App\Http\Requests\UpdateWarehouseRequest;
+use App\Models\ProductWarehouse;
+use App\Models\SkuWarehouse;
 use App\Models\Warehouse;
 
 class WarehouseController extends Controller
@@ -105,6 +107,10 @@ class WarehouseController extends Controller
 
         if (!$warehouse) {
             return $this->error(null, 'Warehouse not found', 404);
+        }   
+
+        if(ProductWarehouse::where('warehouse_id',$id)->exists() || SkuWarehouse::where('warehouse_id',$id)->exists()){
+            return $this->error(null,"Can not delete because this warehouse is linked with some products");
         }
 
         $warehouse->delete();

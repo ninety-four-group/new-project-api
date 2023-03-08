@@ -11,6 +11,7 @@ use App\Http\Requests\StoreCategoryRequest;
 use App\Http\Requests\UpdateCategoryRequest;
 use App\Http\Resources\CategoryResource;
 use App\Models\Category;
+use App\Models\Product;
 use Illuminate\Support\Facades\Storage;
 
 class CategoryController extends Controller
@@ -128,6 +129,14 @@ class CategoryController extends Controller
 
         if (!$category) {
             return $this->error(null, 'Category not found', 404);
+        }
+
+        if(Product::where('category_id',$id)->exists()){
+            return $this->error(null,"Can not delete because this category is linked with some products");
+        }
+
+        if(Category::where('parent_id',$id)->exists()){
+            return $this->error(null,"Can not delete because this category is linked with some category");
         }
 
         // if ($category->image) {

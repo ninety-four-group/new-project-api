@@ -10,6 +10,7 @@ use App\Contracts\VariationInterface;
 use Illuminate\Support\Facades\Storage;
 use App\Http\Requests\StoreVariationRequest;
 use App\Http\Requests\UpdateVariationRequest;
+use App\Models\SkuVariation;
 
 class VariationController extends Controller
 {
@@ -109,6 +110,9 @@ class VariationController extends Controller
             return $this->error(null, 'Variation not found', 404);
         }
 
+        if(SkuVariation::where('variation_id',$id)->exists()){
+            return $this->error(null,"Can not delete because this variation is linked with some SKUs");
+        }
         // if ($category->image) {
         //     Storage::delete($category->image);
         // }
