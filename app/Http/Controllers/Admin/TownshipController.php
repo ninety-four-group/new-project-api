@@ -105,6 +105,8 @@ class TownshipController extends Controller
             return $this->error(null, 'Township not found', 404);
         }
 
+        
+
         $find->delete();
         return $this->success(null, 'Successfully delete');
     }

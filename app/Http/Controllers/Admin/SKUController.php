@@ -8,6 +8,7 @@ use App\Traits\HttpResponses;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreSKURequest;
 use App\Http\Requests\UpdateSKURequest;
+use App\Models\SkuWarehouse;
 use App\Models\StockKeepingUnit;
 
 class SKUController extends Controller
@@ -109,6 +110,10 @@ class SKUController extends Controller
 
         if (!$find) {
             return $this->error(null, 'SKU not found', 404);
+        }
+
+        if(SkuWarehouse::where('sku_id',$id)->exists()){
+            return $this->error(null,"Can not delete because this sku is linked with some Stocks");
         }
 
         // if ($category->image) {

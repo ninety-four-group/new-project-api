@@ -11,8 +11,10 @@ use App\Http\Requests\StoreCountryRequest;
 use App\Http\Requests\StoreRegionRequest;
 use App\Http\Requests\UpdateRegionRequest;
 use App\Http\Requests\UpdateSKURequest;
+use App\Models\City;
 use App\Models\Region;
 use App\Models\StockKeepingUnit;
+use App\Models\Township;
 
 class RegionController extends Controller
 {
@@ -107,6 +109,10 @@ class RegionController extends Controller
 
         if (!$find) {
             return $this->error(null, 'Region not found', 404);
+        }
+
+        if(City::where('region_id',$id)->exists()){
+            return $this->error(null,"Can not delete because this region is linked with some cities");
         }
 
         $find->delete();

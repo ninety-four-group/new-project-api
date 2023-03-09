@@ -12,6 +12,7 @@ use App\Http\Requests\StoreSKURequest;
 use App\Http\Requests\UpdateCountryRequest;
 use App\Http\Requests\UpdateSKURequest;
 use App\Models\Country;
+use App\Models\Region;
 use App\Models\StockKeepingUnit;
 
 class CountryController extends Controller
@@ -108,6 +109,11 @@ class CountryController extends Controller
         if (!$find) {
             return $this->error(null, 'Country not found', 404);
         }
+
+        if(Region::where('country_id',$id)->exists()){
+            return $this->error(null,"Can not delete because this country is linked with some regions");
+        }
+
 
         // if ($category->image) {
         //     Storage::delete($category->image);

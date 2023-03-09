@@ -10,6 +10,7 @@ use App\Http\Requests\StoreCityRequest;
 use App\Http\Requests\UpdateCityRequest;
 use App\Models\City;
 use App\Models\Region;
+use App\Models\Township;
 
 class CityController extends Controller
 {
@@ -104,6 +105,10 @@ class CityController extends Controller
 
         if (!$find) {
             return $this->error(null, 'City not found', 404);
+        }
+
+        if(Township::where('city_id',$id)->exists()){
+            return $this->error(null,"Can not delete because this city is linked with some townships");
         }
 
         $find->delete();
