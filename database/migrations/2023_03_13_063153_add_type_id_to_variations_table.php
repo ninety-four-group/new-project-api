@@ -13,12 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('variation_types', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->string('flag')->nullable();
-            $table->softDeletes();
-            $table->timestamps();
+        Schema::table('variations', function (Blueprint $table) {
+            $table->dropColumn('type');
+            $table->foreignId('type_id')->constrained('variation_types')->onUpdate('cascade')
+            ->onDelete('cascade');
         });
     }
 
@@ -29,6 +27,8 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('variation_types');
+        Schema::table('variations', function (Blueprint $table) {
+            //
+        });
     }
 };
