@@ -22,7 +22,7 @@ class ProductSKUResource extends JsonResource
             'price' => $this->price,
             'status' => $this->status,
             // 'stock' => StockResource::collection($this->warehouses),
-            'variations' => array_map(function($d){return VariationResource::collection($d);},$this->variations),
+            'variations' => is_array($this->variations) ? array_map(function($d){return VariationResource::collection($d);},$this->variations) : $this->variations,
             // 'variations' =>  $this->variations,
             'status' => $this->status,
             'deleted_at' => $this->deleted_at,
