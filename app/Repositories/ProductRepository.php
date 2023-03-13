@@ -24,6 +24,15 @@ class ProductRepository implements ProductInterface
             $query->orWhere('mm_name', 'LIKE', "%{$search}%");
         }
 
+        if($request->category_id){
+            $query->where('category_id', $request->category_id);
+        }
+
+        if($request->brand_id){
+            $query->where('brand_id', $request->brand_id);
+        }
+
+
         if($request->warehouse_id){
             $warehouseId = $request->warehouse_id;
 
