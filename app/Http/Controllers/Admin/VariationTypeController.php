@@ -3,13 +3,18 @@
 namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
+use App\Models\VariationType;
 use App\Traits\HttpResponses;
+use App\Models\VariationCategory;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\StoreVariationCategoryRequest;
-use App\Http\Requests\UpdateVariationCategoryRequest;
 use App\Http\Resources\VariationCategoryResource;
+use App\Http\Requests\StoreVariationCategoryRequest;
+use App\Http\Requests\StoreVariationTypeRequest;
+use App\Http\Requests\UpdateVariationCategoryRequest;
+use App\Http\Resources\VariationTypeResource;
+use App\Models\Variation;
 
-class VariationCategoryController extends Controller
+class VariationTypeController extends Controller
 {
     use HttpResponses;
 
@@ -23,7 +28,7 @@ class VariationCategoryController extends Controller
         $search = $request->query('search');
         $limit = $request->query('limit', 10);
 
-        $query = VariationCategory::query();
+        $query = VariationType::query();
 
         if ($search) {
             $query->where('name', 'LIKE', "%{$search}%");
@@ -31,9 +36,9 @@ class VariationCategoryController extends Controller
 
         $data = $query->paginate($limit);
 
-        return $this->success(VariationCategoryResource::collection($data)->additional(['meta' => [
+        return $this->success(VariationTypeResource::collection($data)->additional(['meta' => [
             'total_page' => (int) ceil($data->total() / $data->perPage()),
-        ]])->response()->getData(),'Variation Category List');
+        ]])->response()->getData(),'Variation Type List');
     }
 
 
@@ -43,13 +48,14 @@ class VariationCategoryController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreVariationCategoryRequest $request)
+    public function store(StoreVariationTypeRequest $request)
     {
-       $save = VariationCategory::create([
-            'name' => $request->name
+       $save = VariationType::create([
+            'name' => $request->name,
+            'flag' => $request->flag
         ]);
 
-        return $this->success(new VariationCategoryResource($save), 'Successfully created');
+        return $this->success(new VariationTypeResource($save), 'Successfully created');
     }
 
     /**
@@ -60,11 +66,11 @@ class VariationCategoryController extends Controller
      */
     public function show($id)
     {
-        $data = VariationCategory::find($id);
+        $data = VariationType::find($id);
         if (!$data) {
-            return $this->error(null, 'Variation Category not found', 404);
+            return $this->error(null, 'Variation Type not found', 404);
         }
-        return $this->success(new VariationCategoryResource($data), 'Variation Category Detail');
+        return $this->success(new VariationTypeResource($data), 'Variation Type Detail');
     }
 
 
@@ -77,16 +83,17 @@ class VariationCategoryController extends Controller
      */
     public function update(UpdateVariationCategoryRequest $request, $id)
     {
-        $find = VariationCategory::find($id);
+        $find = VariationType::find($id);
 
         if (!$find) {
-            return $this->error(null, 'Variation Category not found', 404);
+            return $this->error(null, 'Variation Type not found', 404);
         }
 
         $find->name = $request->name ?? $find->name;
+        $find->flag = $request->flag ?? $find->flag;
         $find->update();
 
-        return $this->success(new VariationCategoryResource($find), 'Successfully updated');
+        return $this->success(new VariationTypeResource($find), 'Successfully updated');
     }
 
     /**
@@ -97,10 +104,14 @@ class VariationCategoryController extends Controller
      */
     public function destroy($id)
     {
-        $data = VariationCategory::find($id);
+        $data = VariationType::find($id);
 
         if (!$data) {
-            return $this->error(null, 'Variation Category not found', 404);
+            return $this->error(null, 'Variation Type not found', 404);
+        }
+
+        if(Variation::where('type_id',$id)->exists()){
+            return $this->error(null,"Can not delete because this variation type is linked with some variations");
         }
 
         $data->delete();

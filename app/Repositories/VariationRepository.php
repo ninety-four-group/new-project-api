@@ -24,11 +24,12 @@ class VariationRepository implements VariationInterface
             $query->where('name', 'LIKE', "%{$search}%");
         }
 
-        if ($request->type) {
-            $query->where('type', $request->type);
+        if ($request->type_id) {
+            $query->where('type_id', $request->type_id);
         }
 
         $query->with('media');
+        $query->with('type');
 
         $data = $query->paginate($limit);
 
@@ -40,7 +41,8 @@ class VariationRepository implements VariationInterface
     public function get($id)
     {
         $find = Variation::whereId($id)
-                    ->with('variationCategory')
+                    ->with('type')
+                    ->with('media')
                     ->first();
 
         if (!$find) {
@@ -63,7 +65,7 @@ class VariationRepository implements VariationInterface
         $find = Variation::find($id);
 
         $find->name = $data['name'];
-        $find->type = $data['type'];
+        $find->type_id = $data['type_id'];
         $find->type_value = $data['type_value'];
         $find->media_id = $data['media_id'] ?? $find->media_id;
         $find->update();

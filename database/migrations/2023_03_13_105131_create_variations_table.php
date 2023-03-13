@@ -17,10 +17,11 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->text('image')->nullable();
-            $table->string('type')->nullable();
+            $table->unsignedBigInteger('type_id');
             $table->string('type_value')->nullable();
             $table->unsignedBigInteger('media_id');
             $table->foreign('media_id')->references('id')->on('media');
+            $table->foreign('type_id')->references('id')->on('variation_types');
             $table->softDeletes();
             $table->timestamps();
         });

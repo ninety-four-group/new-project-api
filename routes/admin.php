@@ -17,6 +17,7 @@ use App\Http\Controllers\Admin\TownshipController;
 use App\Http\Controllers\Admin\VariationController;
 use App\Http\Controllers\Admin\WarehouseController;
 use App\Http\Controllers\Admin\CollectionController;
+use App\Http\Controllers\Admin\VariationTypeController;
 use App\Http\Controllers\Admin\VariationCategoryController;
 
 header('Access-Control-Allow-Origin: *');
@@ -38,9 +39,11 @@ Route::resource('products', ProductController::class);
 Route::resource('tags', TagController::class);
 Route::resource('collections', CollectionController::class);
 Route::resource('media', MediaController::class);
+Route::resource('variation-types', VariationTypeController::class);
 Route::resource('variations', VariationController::class);
 Route::resource('sku', SKUController::class);
 Route::resource('stock', StockController::class);
+
 Route::get('products/{id}/variations',[ProductController::class,'getProductVariation']);
 Route::post('products/{id}/variations/sort',[ProductController::class,'sortProductVariation']);
 

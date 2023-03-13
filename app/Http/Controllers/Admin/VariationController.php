@@ -45,7 +45,7 @@ class VariationController extends Controller
     {
         $data = [
             'name' => $request->name,
-            'type' => $request->type,
+            'type_id' => $request->type_id,
             'type_value' => $request->type_value,
             'media_id' => $request->media_id,
         ];
@@ -85,7 +85,7 @@ class VariationController extends Controller
 
         $data = [
             'name' => $request->name ?? $find->name,
-            'type' => $request->type ?? $find->type,
+            'type_id' => $request->type_id ?? $find->type_id,
             'type_value' => $request->type_value ?? $find->type_value,
             'media_id' => $request->media_id ?? $find->media_id,
         ];
