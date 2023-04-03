@@ -1,0 +1,542 @@
+[
+    {
+        "id": 1,
+        "region_id": 2,
+        "name": "tie",
+        "mm_name": "barn",
+        "created_at": "2023-01-26 19:03:21",
+        "updated_at": "2023-01-26 19:03:21",
+        "deleted_at": null
+    },
+    {
+        "id": 2,
+        "region_id": 15,
+        "name": "season",
+        "mm_name": "graph",
+        "created_at": "2023-01-26 19:03:21",
+        "updated_at": "2023-01-26 19:03:21",
+        "deleted_at": null
+    },
+    {
+        "id": 3,
+        "region_id": 6,
+        "name": "worker",
+        "mm_name": "location",
+        "created_at": "2023-01-26 19:03:21",
+        "updated_at": "2023-01-26 19:03:21",
+        "deleted_at": null
+    },
+    {
+        "id": 4,
+        "region_id": 25,
+        "name": "feed",
+        "mm_name": "battle",
+        "created_at": "2023-01-26 19:03:21",
+        "updated_at": "2023-01-26 19:03:21",
+        "deleted_at": null
+    },
+    {
+        "id": 5,
+        "region_id": 16,
+        "name": "final",
+        "mm_name": "noon",
+        "created_at": "2023-01-26 19:03:21",
+        "updated_at": "2023-01-26 19:03:21",
+        "deleted_at": null
+    },
+    {
+        "id": 6,
+        "region_id": 25,
+        "name": "hidden",
+        "mm_name": "slow",
+        "created_at": "2023-01-26 19:03:21",
+        "updated_at": "2023-01-26 19:03:21",
+        "deleted_at": null
+    },
+    {
+        "id": 7,
+        "region_id": 40,
+        "name": "species",
+        "mm_name": "brush",
+        "created_at": "2023-01-26 19:03:21",
+        "updated_at": "2023-01-26 19:03:21",
+        "deleted_at": null
+    },
+    {
+        "id": 8,
+        "region_id": 31,
+        "name": "function",
+        "mm_name": "bread",
+        "created_at": "2023-01-26 19:03:21",
+        "updated_at": "2023-01-26 19:03:21",
+        "deleted_at": null
+    },
+    {
+        "id": 9,
+        "region_id": 38,
+        "name": "lie",
+        "mm_name": "cowboy",
+        "created_at": "2023-01-26 19:03:21",
+        "updated_at": "2023-01-26 19:03:21",
+        "deleted_at": null
+    },
+    {
+        "id": 10,
+        "region_id": 26,
+        "name": "name",
+        "mm_name": "stepped",
+        "created_at": "2023-01-26 19:03:21",
+        "updated_at": "2023-01-26 19:03:21",
+        "deleted_at": null
+    },
+    {
+        "id": 11,
+        "region_id": 23,
+        "name": "contain",
+        "mm_name": "place",
+        "created_at": "2023-01-26 19:03:21",
+        "updated_at": "2023-01-26 19:03:21",
+        "deleted_at": null
+    },
+    {
+        "id": 12,
+        "region_id": 26,
+        "name": "require",
+        "mm_name": "military",
+        "created_at": "2023-01-26 19:03:21",
+        "updated_at": "2023-01-26 19:03:21",
+        "deleted_at": null
+    },
+    {
+        "id": 13,
+        "region_id": 36,
+        "name": "against",
+        "mm_name": "below",
+        "created_at": "2023-01-26 19:03:21",
+        "updated_at": "2023-01-26 19:03:21",
+        "deleted_at": null
+    },
+    {
+        "id": 14,
+        "region_id": 21,
+        "name": "like",
+        "mm_name": "glad",
+        "created_at": "2023-01-26 19:03:21",
+        "updated_at": "2023-01-26 19:03:21",
+        "deleted_at": null
+    },
+    {
+        "id": 15,
+        "region_id": 31,
+        "name": "bell",
+        "mm_name": "using",
+        "created_at": "2023-01-26 19:03:21",
+        "updated_at": "2023-01-26 19:03:21",
+        "deleted_at": null
+    },
+    {
+        "id": 16,
+        "region_id": 36,
+        "name": "choice",
+        "mm_name": "deer",
+        "created_at": "2023-01-26 19:03:21",
+        "updated_at": "2023-01-26 19:03:21",
+        "deleted_at": null
+    },
+    {
+        "id": 17,
+        "region_id": 27,
+        "name": "orange",
+        "mm_name": "declared",
+        "created_at": "2023-01-26 19:03:21",
+        "updated_at": "2023-01-26 19:03:21",
+        "deleted_at": null
+    },
+    {
+        "id": 18,
+        "region_id": 12,
+        "name": "angle",
+        "mm_name": "coach",
+        "created_at": "2023-01-26 19:03:21",
+        "updated_at": "2023-01-26 19:03:21",
+        "deleted_at": null
+    },
+    {
+        "id": 19,
+        "region_id": 6,
+        "name": "shall",
+        "mm_name": "show",
+        "created_at": "2023-01-26 19:03:21",
+        "updated_at": "2023-01-26 19:03:21",
+        "deleted_at": null
+    },
+    {
+        "id": 20,
+        "region_id": 6,
+        "name": "faster",
+        "mm_name": "wild",
+        "created_at": "2023-01-26 19:03:21",
+        "updated_at": "2023-01-26 19:03:21",
+        "deleted_at": null
+    },
+    {
+        "id": 21,
+        "region_id": 23,
+        "name": "battle",
+        "mm_name": "thumb",
+        "created_at": "2023-01-26 19:03:21",
+        "updated_at": "2023-01-26 19:03:21",
+        "deleted_at": null
+    },
+    {
+        "id": 22,
+        "region_id": 25,
+        "name": "hollow",
+        "mm_name": "rope",
+        "created_at": "2023-01-26 19:03:21",
+        "updated_at": "2023-01-26 19:03:21",
+        "deleted_at": null
+    },
+    {
+        "id": 23,
+        "region_id": 14,
+        "name": "time",
+        "mm_name": "rubbed",
+        "created_at": "2023-01-26 19:03:21",
+        "updated_at": "2023-01-26 19:03:21",
+        "deleted_at": null
+    },
+    {
+        "id": 24,
+        "region_id": 38,
+        "name": "constantly",
+        "mm_name": "largest",
+        "created_at": "2023-01-26 19:03:21",
+        "updated_at": "2023-01-26 19:03:21",
+        "deleted_at": null
+    },
+    {
+        "id": 25,
+        "region_id": 18,
+        "name": "chicken",
+        "mm_name": "toward",
+        "created_at": "2023-01-26 19:03:21",
+        "updated_at": "2023-01-26 19:03:21",
+        "deleted_at": null
+    },
+    {
+        "id": 26,
+        "region_id": 39,
+        "name": "mostly",
+        "mm_name": "failed",
+        "created_at": "2023-01-26 19:03:21",
+        "updated_at": "2023-01-26 19:03:21",
+        "deleted_at": null
+    },
+    {
+        "id": 27,
+        "region_id": 32,
+        "name": "love",
+        "mm_name": "carbon",
+        "created_at": "2023-01-26 19:03:21",
+        "updated_at": "2023-01-26 19:03:21",
+        "deleted_at": null
+    },
+    {
+        "id": 28,
+        "region_id": 17,
+        "name": "driven",
+        "mm_name": "supply",
+        "created_at": "2023-01-26 19:03:21",
+        "updated_at": "2023-01-26 19:03:21",
+        "deleted_at": null
+    },
+    {
+        "id": 29,
+        "region_id": 30,
+        "name": "cloth",
+        "mm_name": "ground",
+        "created_at": "2023-01-26 19:03:21",
+        "updated_at": "2023-01-26 19:03:21",
+        "deleted_at": null
+    },
+    {
+        "id": 30,
+        "region_id": 1,
+        "name": "here",
+        "mm_name": "driving",
+        "created_at": "2023-01-26 19:03:21",
+        "updated_at": "2023-01-26 19:03:21",
+        "deleted_at": null
+    },
+    {
+        "id": 31,
+        "region_id": 18,
+        "name": "blue",
+        "mm_name": "myself",
+        "created_at": "2023-01-26 19:03:21",
+        "updated_at": "2023-01-26 19:03:21",
+        "deleted_at": null
+    },
+    {
+        "id": 32,
+        "region_id": 6,
+        "name": "machinery",
+        "mm_name": "understanding",
+        "created_at": "2023-01-26 19:03:21",
+        "updated_at": "2023-01-26 19:03:21",
+        "deleted_at": null
+    },
+    {
+        "id": 33,
+        "region_id": 9,
+        "name": "route",
+        "mm_name": "silence",
+        "created_at": "2023-01-26 19:03:21",
+        "updated_at": "2023-01-26 19:03:21",
+        "deleted_at": null
+    },
+    {
+        "id": 34,
+        "region_id": 8,
+        "name": "finish",
+        "mm_name": "recently",
+        "created_at": "2023-01-26 19:03:21",
+        "updated_at": "2023-01-26 19:03:21",
+        "deleted_at": null
+    },
+    {
+        "id": 35,
+        "region_id": 20,
+        "name": "flat",
+        "mm_name": "taught",
+        "created_at": "2023-01-26 19:03:21",
+        "updated_at": "2023-01-26 19:03:21",
+        "deleted_at": null
+    },
+    {
+        "id": 36,
+        "region_id": 34,
+        "name": "declared",
+        "mm_name": "flower",
+        "created_at": "2023-01-26 19:03:21",
+        "updated_at": "2023-01-26 19:03:21",
+        "deleted_at": null
+    },
+    {
+        "id": 37,
+        "region_id": 24,
+        "name": "decide",
+        "mm_name": "eight",
+        "created_at": "2023-01-26 19:03:21",
+        "updated_at": "2023-01-26 19:03:21",
+        "deleted_at": null
+    },
+    {
+        "id": 38,
+        "region_id": 40,
+        "name": "laid",
+        "mm_name": "dot",
+        "created_at": "2023-01-26 19:03:21",
+        "updated_at": "2023-01-26 19:03:21",
+        "deleted_at": null
+    },
+    {
+        "id": 39,
+        "region_id": 13,
+        "name": "live",
+        "mm_name": "gift",
+        "created_at": "2023-01-26 19:03:21",
+        "updated_at": "2023-01-26 19:03:21",
+        "deleted_at": null
+    },
+    {
+        "id": 40,
+        "region_id": 25,
+        "name": "equipment",
+        "mm_name": "well",
+        "created_at": "2023-01-26 19:03:21",
+        "updated_at": "2023-01-26 19:03:21",
+        "deleted_at": null
+    },
+    {
+        "id": 41,
+        "region_id": 18,
+        "name": "inch",
+        "mm_name": "breathing",
+        "created_at": "2023-01-26 19:03:21",
+        "updated_at": "2023-01-26 19:03:21",
+        "deleted_at": null
+    },
+    {
+        "id": 42,
+        "region_id": 31,
+        "name": "rice",
+        "mm_name": "court",
+        "created_at": "2023-01-26 19:03:21",
+        "updated_at": "2023-01-26 19:03:21",
+        "deleted_at": null
+    },
+    {
+        "id": 43,
+        "region_id": 25,
+        "name": "right",
+        "mm_name": "physical",
+        "created_at": "2023-01-26 19:03:21",
+        "updated_at": "2023-01-26 19:03:21",
+        "deleted_at": null
+    },
+    {
+        "id": 44,
+        "region_id": 12,
+        "name": "avoid",
+        "mm_name": "twenty",
+        "created_at": "2023-01-26 19:03:21",
+        "updated_at": "2023-01-26 19:03:21",
+        "deleted_at": null
+    },
+    {
+        "id": 45,
+        "region_id": 21,
+        "name": "cause",
+        "mm_name": "supply",
+        "created_at": "2023-01-26 19:03:21",
+        "updated_at": "2023-01-26 19:03:21",
+        "deleted_at": null
+    },
+    {
+        "id": 46,
+        "region_id": 14,
+        "name": "taught",
+        "mm_name": "understanding",
+        "created_at": "2023-01-26 19:03:21",
+        "updated_at": "2023-01-26 19:03:21",
+        "deleted_at": null
+    },
+    {
+        "id": 47,
+        "region_id": 8,
+        "name": "lion",
+        "mm_name": "shot",
+        "created_at": "2023-01-26 19:03:21",
+        "updated_at": "2023-01-26 19:03:21",
+        "deleted_at": null
+    },
+    {
+        "id": 48,
+        "region_id": 35,
+        "name": "sad",
+        "mm_name": "list",
+        "created_at": "2023-01-26 19:03:21",
+        "updated_at": "2023-01-26 19:03:21",
+        "deleted_at": null
+    },
+    {
+        "id": 49,
+        "region_id": 13,
+        "name": "bit",
+        "mm_name": "job",
+        "created_at": "2023-01-26 19:03:21",
+        "updated_at": "2023-01-26 19:03:21",
+        "deleted_at": null
+    },
+    {
+        "id": 50,
+        "region_id": 5,
+        "name": "experiment",
+        "mm_name": "anybody",
+        "created_at": "2023-01-26 19:03:21",
+        "updated_at": "2023-01-26 19:03:21",
+        "deleted_at": null
+    },
+    {
+        "id": 51,
+        "region_id": 10,
+        "name": "rubbed",
+        "mm_name": "giving",
+        "created_at": "2023-01-26 19:03:21",
+        "updated_at": "2023-01-26 19:03:21",
+        "deleted_at": null
+    },
+    {
+        "id": 52,
+        "region_id": 29,
+        "name": "wherever",
+        "mm_name": "mind",
+        "created_at": "2023-01-26 19:03:21",
+        "updated_at": "2023-01-26 19:03:21",
+        "deleted_at": null
+    },
+    {
+        "id": 53,
+        "region_id": 29,
+        "name": "frequently",
+        "mm_name": "nest",
+        "created_at": "2023-01-26 19:03:21",
+        "updated_at": "2023-01-26 19:03:21",
+        "deleted_at": null
+    },
+    {
+        "id": 54,
+        "region_id": 40,
+        "name": "farther",
+        "mm_name": "band",
+        "created_at": "2023-01-26 19:03:21",
+        "updated_at": "2023-01-26 19:03:21",
+        "deleted_at": null
+    },
+    {
+        "id": 55,
+        "region_id": 23,
+        "name": "disease",
+        "mm_name": "test",
+        "created_at": "2023-01-26 19:03:21",
+        "updated_at": "2023-01-26 19:03:21",
+        "deleted_at": null
+    },
+    {
+        "id": 56,
+        "region_id": 10,
+        "name": "charge",
+        "mm_name": "sitting",
+        "created_at": "2023-01-26 19:03:21",
+        "updated_at": "2023-01-26 19:03:21",
+        "deleted_at": null
+    },
+    {
+        "id": 57,
+        "region_id": 4,
+        "name": "though",
+        "mm_name": "thus",
+        "created_at": "2023-01-26 19:03:21",
+        "updated_at": "2023-01-26 19:03:21",
+        "deleted_at": null
+    },
+    {
+        "id": 58,
+        "region_id": 22,
+        "name": "major",
+        "mm_name": "eat",
+        "created_at": "2023-01-26 19:03:21",
+        "updated_at": "2023-01-26 19:03:21",
+        "deleted_at": null
+    },
+    {
+        "id": 59,
+        "region_id": 39,
+        "name": "heard",
+        "mm_name": "change",
+        "created_at": "2023-01-26 19:03:21",
+        "updated_at": "2023-01-26 19:03:21",
+        "deleted_at": null
+    },
+    {
+        "id": 60,
+        "region_id": 24,
+        "name": "substance",
+        "mm_name": "building",
+        "created_at": "2023-01-26 19:03:21",
+        "updated_at": "2023-01-26 19:03:21",
+        "deleted_at": null
+    }
+]

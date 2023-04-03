@@ -1,0 +1,362 @@
+[
+    {
+        "id": 1,
+        "country_id": 2,
+        "name": "protection",
+        "mm_name": "shade",
+        "created_at": "2023-01-26 19:01:54",
+        "updated_at": "2023-01-26 19:01:54",
+        "deleted_at": null
+    },
+    {
+        "id": 2,
+        "country_id": 6,
+        "name": "account",
+        "mm_name": "nuts",
+        "created_at": "2023-01-26 19:01:54",
+        "updated_at": "2023-01-26 19:01:54",
+        "deleted_at": null
+    },
+    {
+        "id": 3,
+        "country_id": 5,
+        "name": "avoid",
+        "mm_name": "fur",
+        "created_at": "2023-01-26 19:01:54",
+        "updated_at": "2023-01-26 19:01:54",
+        "deleted_at": null
+    },
+    {
+        "id": 4,
+        "country_id": 16,
+        "name": "environment",
+        "mm_name": "path",
+        "created_at": "2023-01-26 19:01:54",
+        "updated_at": "2023-01-26 19:01:54",
+        "deleted_at": null
+    },
+    {
+        "id": 5,
+        "country_id": 19,
+        "name": "whispered",
+        "mm_name": "essential",
+        "created_at": "2023-01-26 19:01:54",
+        "updated_at": "2023-01-26 19:01:54",
+        "deleted_at": null
+    },
+    {
+        "id": 6,
+        "country_id": 10,
+        "name": "swim",
+        "mm_name": "angle",
+        "created_at": "2023-01-26 19:01:54",
+        "updated_at": "2023-01-26 19:01:54",
+        "deleted_at": null
+    },
+    {
+        "id": 7,
+        "country_id": 14,
+        "name": "doctor",
+        "mm_name": "may",
+        "created_at": "2023-01-26 19:01:54",
+        "updated_at": "2023-01-26 19:01:54",
+        "deleted_at": null
+    },
+    {
+        "id": 8,
+        "country_id": 2,
+        "name": "kids",
+        "mm_name": "specific",
+        "created_at": "2023-01-26 19:01:54",
+        "updated_at": "2023-01-26 19:01:54",
+        "deleted_at": null
+    },
+    {
+        "id": 9,
+        "country_id": 15,
+        "name": "actual",
+        "mm_name": "pretty",
+        "created_at": "2023-01-26 19:01:54",
+        "updated_at": "2023-01-26 19:01:54",
+        "deleted_at": null
+    },
+    {
+        "id": 10,
+        "country_id": 9,
+        "name": "produce",
+        "mm_name": "reach",
+        "created_at": "2023-01-26 19:01:54",
+        "updated_at": "2023-01-26 19:01:54",
+        "deleted_at": null
+    },
+    {
+        "id": 11,
+        "country_id": 3,
+        "name": "chest",
+        "mm_name": "done",
+        "created_at": "2023-01-26 19:01:54",
+        "updated_at": "2023-01-26 19:01:54",
+        "deleted_at": null
+    },
+    {
+        "id": 12,
+        "country_id": 4,
+        "name": "wish",
+        "mm_name": "dull",
+        "created_at": "2023-01-26 19:01:54",
+        "updated_at": "2023-01-26 19:01:54",
+        "deleted_at": null
+    },
+    {
+        "id": 13,
+        "country_id": 13,
+        "name": "location",
+        "mm_name": "food",
+        "created_at": "2023-01-26 19:01:54",
+        "updated_at": "2023-01-26 19:01:54",
+        "deleted_at": null
+    },
+    {
+        "id": 14,
+        "country_id": 11,
+        "name": "fifteen",
+        "mm_name": "studied",
+        "created_at": "2023-01-26 19:01:54",
+        "updated_at": "2023-01-26 19:01:54",
+        "deleted_at": null
+    },
+    {
+        "id": 15,
+        "country_id": 7,
+        "name": "forty",
+        "mm_name": "rock",
+        "created_at": "2023-01-26 19:01:54",
+        "updated_at": "2023-01-26 19:01:54",
+        "deleted_at": null
+    },
+    {
+        "id": 16,
+        "country_id": 18,
+        "name": "said",
+        "mm_name": "special",
+        "created_at": "2023-01-26 19:01:54",
+        "updated_at": "2023-01-26 19:01:54",
+        "deleted_at": null
+    },
+    {
+        "id": 17,
+        "country_id": 18,
+        "name": "movie",
+        "mm_name": "ten",
+        "created_at": "2023-01-26 19:01:54",
+        "updated_at": "2023-01-26 19:01:54",
+        "deleted_at": null
+    },
+    {
+        "id": 18,
+        "country_id": 11,
+        "name": "magnet",
+        "mm_name": "lie",
+        "created_at": "2023-01-26 19:01:54",
+        "updated_at": "2023-01-26 19:01:54",
+        "deleted_at": null
+    },
+    {
+        "id": 19,
+        "country_id": 9,
+        "name": "somewhere",
+        "mm_name": "honor",
+        "created_at": "2023-01-26 19:01:54",
+        "updated_at": "2023-01-26 19:01:54",
+        "deleted_at": null
+    },
+    {
+        "id": 20,
+        "country_id": 12,
+        "name": "hunter",
+        "mm_name": "farmer",
+        "created_at": "2023-01-26 19:01:54",
+        "updated_at": "2023-01-26 19:01:54",
+        "deleted_at": null
+    },
+    {
+        "id": 21,
+        "country_id": 3,
+        "name": "poor",
+        "mm_name": "aside",
+        "created_at": "2023-01-26 19:01:54",
+        "updated_at": "2023-01-26 19:01:54",
+        "deleted_at": null
+    },
+    {
+        "id": 22,
+        "country_id": 15,
+        "name": "camp",
+        "mm_name": "naturally",
+        "created_at": "2023-01-26 19:01:54",
+        "updated_at": "2023-01-26 19:01:54",
+        "deleted_at": null
+    },
+    {
+        "id": 23,
+        "country_id": 10,
+        "name": "definition",
+        "mm_name": "again",
+        "created_at": "2023-01-26 19:01:54",
+        "updated_at": "2023-01-26 19:01:54",
+        "deleted_at": null
+    },
+    {
+        "id": 24,
+        "country_id": 2,
+        "name": "asleep",
+        "mm_name": "religious",
+        "created_at": "2023-01-26 19:01:54",
+        "updated_at": "2023-01-26 19:01:54",
+        "deleted_at": null
+    },
+    {
+        "id": 25,
+        "country_id": 3,
+        "name": "ocean",
+        "mm_name": "color",
+        "created_at": "2023-01-26 19:01:54",
+        "updated_at": "2023-01-26 19:01:54",
+        "deleted_at": null
+    },
+    {
+        "id": 26,
+        "country_id": 9,
+        "name": "beautiful",
+        "mm_name": "nearby",
+        "created_at": "2023-01-26 19:01:54",
+        "updated_at": "2023-01-26 19:01:54",
+        "deleted_at": null
+    },
+    {
+        "id": 27,
+        "country_id": 14,
+        "name": "yard",
+        "mm_name": "tea",
+        "created_at": "2023-01-26 19:01:54",
+        "updated_at": "2023-01-26 19:01:54",
+        "deleted_at": null
+    },
+    {
+        "id": 28,
+        "country_id": 9,
+        "name": "facing",
+        "mm_name": "street",
+        "created_at": "2023-01-26 19:01:54",
+        "updated_at": "2023-01-26 19:01:54",
+        "deleted_at": null
+    },
+    {
+        "id": 29,
+        "country_id": 17,
+        "name": "equally",
+        "mm_name": "baby",
+        "created_at": "2023-01-26 19:01:54",
+        "updated_at": "2023-01-26 19:01:54",
+        "deleted_at": null
+    },
+    {
+        "id": 30,
+        "country_id": 8,
+        "name": "twenty",
+        "mm_name": "tree",
+        "created_at": "2023-01-26 19:01:54",
+        "updated_at": "2023-01-26 19:01:54",
+        "deleted_at": null
+    },
+    {
+        "id": 31,
+        "country_id": 6,
+        "name": "using",
+        "mm_name": "easy",
+        "created_at": "2023-01-26 19:01:54",
+        "updated_at": "2023-01-26 19:01:54",
+        "deleted_at": null
+    },
+    {
+        "id": 32,
+        "country_id": 15,
+        "name": "fighting",
+        "mm_name": "learn",
+        "created_at": "2023-01-26 19:01:54",
+        "updated_at": "2023-01-26 19:01:54",
+        "deleted_at": null
+    },
+    {
+        "id": 33,
+        "country_id": 18,
+        "name": "exercise",
+        "mm_name": "exact",
+        "created_at": "2023-01-26 19:01:54",
+        "updated_at": "2023-01-26 19:01:54",
+        "deleted_at": null
+    },
+    {
+        "id": 34,
+        "country_id": 17,
+        "name": "length",
+        "mm_name": "shoe",
+        "created_at": "2023-01-26 19:01:54",
+        "updated_at": "2023-01-26 19:01:54",
+        "deleted_at": null
+    },
+    {
+        "id": 35,
+        "country_id": 4,
+        "name": "thing",
+        "mm_name": "silly",
+        "created_at": "2023-01-26 19:01:54",
+        "updated_at": "2023-01-26 19:01:54",
+        "deleted_at": null
+    },
+    {
+        "id": 36,
+        "country_id": 14,
+        "name": "activity",
+        "mm_name": "knife",
+        "created_at": "2023-01-26 19:01:54",
+        "updated_at": "2023-01-26 19:01:54",
+        "deleted_at": null
+    },
+    {
+        "id": 37,
+        "country_id": 10,
+        "name": "cap",
+        "mm_name": "or",
+        "created_at": "2023-01-26 19:01:54",
+        "updated_at": "2023-01-26 19:01:54",
+        "deleted_at": null
+    },
+    {
+        "id": 38,
+        "country_id": 8,
+        "name": "tropical",
+        "mm_name": "provide",
+        "created_at": "2023-01-26 19:01:54",
+        "updated_at": "2023-01-26 19:01:54",
+        "deleted_at": null
+    },
+    {
+        "id": 39,
+        "country_id": 20,
+        "name": "pine",
+        "mm_name": "jet",
+        "created_at": "2023-01-26 19:01:54",
+        "updated_at": "2023-01-26 19:01:54",
+        "deleted_at": null
+    },
+    {
+        "id": 40,
+        "country_id": 18,
+        "name": "truck",
+        "mm_name": "lunch",
+        "created_at": "2023-01-26 19:01:54",
+        "updated_at": "2023-01-26 19:01:54",
+        "deleted_at": null
+    }
+]

@@ -1,0 +1,182 @@
+[
+    {
+        "id": 1,
+        "name": "needs",
+        "mm_name": "member",
+        "status": null,
+        "created_at": "2023-01-26 18:50:02",
+        "updated_at": "2023-01-26 18:50:02",
+        "deleted_at": null
+    },
+    {
+        "id": 2,
+        "name": "tropical",
+        "mm_name": "coach",
+        "status": null,
+        "created_at": "2023-01-26 18:50:02",
+        "updated_at": "2023-01-26 18:50:02",
+        "deleted_at": null
+    },
+    {
+        "id": 3,
+        "name": "face",
+        "mm_name": "recent",
+        "status": null,
+        "created_at": "2023-01-26 18:50:02",
+        "updated_at": "2023-01-26 18:50:02",
+        "deleted_at": null
+    },
+    {
+        "id": 4,
+        "name": "write",
+        "mm_name": "could",
+        "status": null,
+        "created_at": "2023-01-26 18:50:02",
+        "updated_at": "2023-01-26 18:50:02",
+        "deleted_at": null
+    },
+    {
+        "id": 5,
+        "name": "base",
+        "mm_name": "sport",
+        "status": null,
+        "created_at": "2023-01-26 18:50:02",
+        "updated_at": "2023-01-26 18:50:02",
+        "deleted_at": null
+    },
+    {
+        "id": 6,
+        "name": "paid",
+        "mm_name": "cream",
+        "status": null,
+        "created_at": "2023-01-26 18:50:02",
+        "updated_at": "2023-01-26 18:50:02",
+        "deleted_at": null
+    },
+    {
+        "id": 7,
+        "name": "hard",
+        "mm_name": "managed",
+        "status": null,
+        "created_at": "2023-01-26 18:50:02",
+        "updated_at": "2023-01-26 18:50:02",
+        "deleted_at": null
+    },
+    {
+        "id": 8,
+        "name": "mean",
+        "mm_name": "though",
+        "status": null,
+        "created_at": "2023-01-26 18:50:02",
+        "updated_at": "2023-01-26 18:50:02",
+        "deleted_at": null
+    },
+    {
+        "id": 9,
+        "name": "right",
+        "mm_name": "firm",
+        "status": null,
+        "created_at": "2023-01-26 18:50:02",
+        "updated_at": "2023-01-26 18:50:02",
+        "deleted_at": null
+    },
+    {
+        "id": 10,
+        "name": "after",
+        "mm_name": "strike",
+        "status": null,
+        "created_at": "2023-01-26 18:50:02",
+        "updated_at": "2023-01-26 18:50:02",
+        "deleted_at": null
+    },
+    {
+        "id": 11,
+        "name": "willing",
+        "mm_name": "ought",
+        "status": null,
+        "created_at": "2023-01-26 18:50:02",
+        "updated_at": "2023-01-26 18:50:02",
+        "deleted_at": null
+    },
+    {
+        "id": 12,
+        "name": "suppose",
+        "mm_name": "specific",
+        "status": null,
+        "created_at": "2023-01-26 18:50:02",
+        "updated_at": "2023-01-26 18:50:02",
+        "deleted_at": null
+    },
+    {
+        "id": 13,
+        "name": "six",
+        "mm_name": "breathing",
+        "status": null,
+        "created_at": "2023-01-26 18:50:02",
+        "updated_at": "2023-01-26 18:50:02",
+        "deleted_at": null
+    },
+    {
+        "id": 14,
+        "name": "though",
+        "mm_name": "spread",
+        "status": null,
+        "created_at": "2023-01-26 18:50:02",
+        "updated_at": "2023-01-26 18:50:02",
+        "deleted_at": null
+    },
+    {
+        "id": 15,
+        "name": "far",
+        "mm_name": "map",
+        "status": null,
+        "created_at": "2023-01-26 18:50:02",
+        "updated_at": "2023-01-26 18:50:02",
+        "deleted_at": null
+    },
+    {
+        "id": 16,
+        "name": "became",
+        "mm_name": "pleasure",
+        "status": null,
+        "created_at": "2023-01-26 18:50:02",
+        "updated_at": "2023-01-26 18:50:02",
+        "deleted_at": null
+    },
+    {
+        "id": 17,
+        "name": "judge",
+        "mm_name": "metal",
+        "status": null,
+        "created_at": "2023-01-26 18:50:02",
+        "updated_at": "2023-01-26 18:50:02",
+        "deleted_at": null
+    },
+    {
+        "id": 18,
+        "name": "clock",
+        "mm_name": "railroad",
+        "status": null,
+        "created_at": "2023-01-26 18:50:02",
+        "updated_at": "2023-01-26 18:50:02",
+        "deleted_at": null
+    },
+    {
+        "id": 19,
+        "name": "cause",
+        "mm_name": "fresh",
+        "status": null,
+        "created_at": "2023-01-26 18:50:02",
+        "updated_at": "2023-01-26 18:50:02",
+        "deleted_at": null
+    },
+    {
+        "id": 20,
+        "name": "tight",
+        "mm_name": "pupil",
+        "status": null,
+        "created_at": "2023-01-26 18:50:02",
+        "updated_at": "2023-01-26 18:50:02",
+        "deleted_at": null
+    }
+]

@@ -1,0 +1,182 @@
+[
+    {
+        "id": 1,
+        "variation_category_id": 3,
+        "name": "topic",
+        "image": "https://media.wired.co.uk/photos/607d91994d40fbb952b6ad64/master/w_1600%2Cc_limit/wired-meme-nft-brian.jpg",
+        "created_at": "2023-01-26 18:53:53",
+        "updated_at": "2023-01-26 18:53:53",
+        "deleted_at": null
+    },
+    {
+        "id": 2,
+        "variation_category_id": 2,
+        "name": "slide",
+        "image": "https://media.wired.co.uk/photos/607d91994d40fbb952b6ad64/master/w_1600%2Cc_limit/wired-meme-nft-brian.jpg",
+        "created_at": "2023-01-26 18:53:53",
+        "updated_at": "2023-01-26 18:53:53",
+        "deleted_at": null
+    },
+    {
+        "id": 3,
+        "variation_category_id": 10,
+        "name": "lost",
+        "image": "https://media.wired.co.uk/photos/607d91994d40fbb952b6ad64/master/w_1600%2Cc_limit/wired-meme-nft-brian.jpg",
+        "created_at": "2023-01-26 18:53:53",
+        "updated_at": "2023-01-26 18:53:53",
+        "deleted_at": null
+    },
+    {
+        "id": 4,
+        "variation_category_id": 3,
+        "name": "giant",
+        "image": "https://media.wired.co.uk/photos/607d91994d40fbb952b6ad64/master/w_1600%2Cc_limit/wired-meme-nft-brian.jpg",
+        "created_at": "2023-01-26 18:53:53",
+        "updated_at": "2023-01-26 18:53:53",
+        "deleted_at": null
+    },
+    {
+        "id": 5,
+        "variation_category_id": 9,
+        "name": "explanation",
+        "image": "https://media.wired.co.uk/photos/607d91994d40fbb952b6ad64/master/w_1600%2Cc_limit/wired-meme-nft-brian.jpg",
+        "created_at": "2023-01-26 18:53:53",
+        "updated_at": "2023-01-26 18:53:53",
+        "deleted_at": null
+    },
+    {
+        "id": 6,
+        "variation_category_id": 7,
+        "name": "cotton",
+        "image": "https://media.wired.co.uk/photos/607d91994d40fbb952b6ad64/master/w_1600%2Cc_limit/wired-meme-nft-brian.jpg",
+        "created_at": "2023-01-26 18:53:53",
+        "updated_at": "2023-01-26 18:53:53",
+        "deleted_at": null
+    },
+    {
+        "id": 7,
+        "variation_category_id": 3,
+        "name": "won",
+        "image": "https://media.wired.co.uk/photos/607d91994d40fbb952b6ad64/master/w_1600%2Cc_limit/wired-meme-nft-brian.jpg",
+        "created_at": "2023-01-26 18:53:53",
+        "updated_at": "2023-01-26 18:53:53",
+        "deleted_at": null
+    },
+    {
+        "id": 8,
+        "variation_category_id": 1,
+        "name": "remain",
+        "image": "https://media.wired.co.uk/photos/607d91994d40fbb952b6ad64/master/w_1600%2Cc_limit/wired-meme-nft-brian.jpg",
+        "created_at": "2023-01-26 18:53:53",
+        "updated_at": "2023-01-26 18:53:53",
+        "deleted_at": null
+    },
+    {
+        "id": 9,
+        "variation_category_id": 4,
+        "name": "hurried",
+        "image": "https://media.wired.co.uk/photos/607d91994d40fbb952b6ad64/master/w_1600%2Cc_limit/wired-meme-nft-brian.jpg",
+        "created_at": "2023-01-26 18:53:53",
+        "updated_at": "2023-01-26 18:53:53",
+        "deleted_at": null
+    },
+    {
+        "id": 10,
+        "variation_category_id": 10,
+        "name": "brave",
+        "image": "https://media.wired.co.uk/photos/607d91994d40fbb952b6ad64/master/w_1600%2Cc_limit/wired-meme-nft-brian.jpg",
+        "created_at": "2023-01-26 18:53:53",
+        "updated_at": "2023-01-26 18:53:53",
+        "deleted_at": null
+    },
+    {
+        "id": 11,
+        "variation_category_id": 9,
+        "name": "driving",
+        "image": "https://media.wired.co.uk/photos/607d91994d40fbb952b6ad64/master/w_1600%2Cc_limit/wired-meme-nft-brian.jpg",
+        "created_at": "2023-01-26 18:53:53",
+        "updated_at": "2023-01-26 18:53:53",
+        "deleted_at": null
+    },
+    {
+        "id": 12,
+        "variation_category_id": 9,
+        "name": "tales",
+        "image": "https://media.wired.co.uk/photos/607d91994d40fbb952b6ad64/master/w_1600%2Cc_limit/wired-meme-nft-brian.jpg",
+        "created_at": "2023-01-26 18:53:53",
+        "updated_at": "2023-01-26 18:53:53",
+        "deleted_at": null
+    },
+    {
+        "id": 13,
+        "variation_category_id": 3,
+        "name": "mile",
+        "image": "https://media.wired.co.uk/photos/607d91994d40fbb952b6ad64/master/w_1600%2Cc_limit/wired-meme-nft-brian.jpg",
+        "created_at": "2023-01-26 18:53:53",
+        "updated_at": "2023-01-26 18:53:53",
+        "deleted_at": null
+    },
+    {
+        "id": 14,
+        "variation_category_id": 10,
+        "name": "aboard",
+        "image": "https://media.wired.co.uk/photos/607d91994d40fbb952b6ad64/master/w_1600%2Cc_limit/wired-meme-nft-brian.jpg",
+        "created_at": "2023-01-26 18:53:53",
+        "updated_at": "2023-01-26 18:53:53",
+        "deleted_at": null
+    },
+    {
+        "id": 15,
+        "variation_category_id": 1,
+        "name": "belong",
+        "image": "https://media.wired.co.uk/photos/607d91994d40fbb952b6ad64/master/w_1600%2Cc_limit/wired-meme-nft-brian.jpg",
+        "created_at": "2023-01-26 18:53:53",
+        "updated_at": "2023-01-26 18:53:53",
+        "deleted_at": null
+    },
+    {
+        "id": 16,
+        "variation_category_id": 9,
+        "name": "cloth",
+        "image": "https://media.wired.co.uk/photos/607d91994d40fbb952b6ad64/master/w_1600%2Cc_limit/wired-meme-nft-brian.jpg",
+        "created_at": "2023-01-26 18:53:53",
+        "updated_at": "2023-01-26 18:53:53",
+        "deleted_at": null
+    },
+    {
+        "id": 17,
+        "variation_category_id": 5,
+        "name": "tax",
+        "image": "https://media.wired.co.uk/photos/607d91994d40fbb952b6ad64/master/w_1600%2Cc_limit/wired-meme-nft-brian.jpg",
+        "created_at": "2023-01-26 18:53:53",
+        "updated_at": "2023-01-26 18:53:53",
+        "deleted_at": null
+    },
+    {
+        "id": 18,
+        "variation_category_id": 10,
+        "name": "properly",
+        "image": "https://media.wired.co.uk/photos/607d91994d40fbb952b6ad64/master/w_1600%2Cc_limit/wired-meme-nft-brian.jpg",
+        "created_at": "2023-01-26 18:53:53",
+        "updated_at": "2023-01-26 18:53:53",
+        "deleted_at": null
+    },
+    {
+        "id": 19,
+        "variation_category_id": 3,
+        "name": "thou",
+        "image": "https://media.wired.co.uk/photos/607d91994d40fbb952b6ad64/master/w_1600%2Cc_limit/wired-meme-nft-brian.jpg",
+        "created_at": "2023-01-26 18:53:53",
+        "updated_at": "2023-01-26 18:53:53",
+        "deleted_at": null
+    },
+    {
+        "id": 20,
+        "variation_category_id": 10,
+        "name": "yesterday",
+        "image": "https://media.wired.co.uk/photos/607d91994d40fbb952b6ad64/master/w_1600%2Cc_limit/wired-meme-nft-brian.jpg",
+        "created_at": "2023-01-26 18:53:53",
+        "updated_at": "2023-01-26 18:53:53",
+        "deleted_at": null
+    }
+]

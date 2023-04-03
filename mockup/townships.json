@@ -1,0 +1,902 @@
+[
+    {
+        "id": 1,
+        "city_id": 58,
+        "name": "mine",
+        "mm_name": "winter",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 2,
+        "city_id": 55,
+        "name": "parallel",
+        "mm_name": "laugh",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 3,
+        "city_id": 31,
+        "name": "build",
+        "mm_name": "wet",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 4,
+        "city_id": 44,
+        "name": "clock",
+        "mm_name": "brick",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 5,
+        "city_id": 51,
+        "name": "measure",
+        "mm_name": "found",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 6,
+        "city_id": 29,
+        "name": "call",
+        "mm_name": "route",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 7,
+        "city_id": 41,
+        "name": "outer",
+        "mm_name": "one",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 8,
+        "city_id": 19,
+        "name": "felt",
+        "mm_name": "settlers",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 9,
+        "city_id": 40,
+        "name": "unusual",
+        "mm_name": "beyond",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 10,
+        "city_id": 4,
+        "name": "motor",
+        "mm_name": "curious",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 11,
+        "city_id": 43,
+        "name": "slabs",
+        "mm_name": "bus",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 12,
+        "city_id": 45,
+        "name": "farther",
+        "mm_name": "queen",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 13,
+        "city_id": 35,
+        "name": "century",
+        "mm_name": "imagine",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 14,
+        "city_id": 32,
+        "name": "summer",
+        "mm_name": "structure",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 15,
+        "city_id": 34,
+        "name": "then",
+        "mm_name": "motion",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 16,
+        "city_id": 48,
+        "name": "tune",
+        "mm_name": "tobacco",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 17,
+        "city_id": 34,
+        "name": "better",
+        "mm_name": "according",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 18,
+        "city_id": 28,
+        "name": "funny",
+        "mm_name": "whale",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 19,
+        "city_id": 23,
+        "name": "additional",
+        "mm_name": "perfectly",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 20,
+        "city_id": 53,
+        "name": "adjective",
+        "mm_name": "basis",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 21,
+        "city_id": 58,
+        "name": "managed",
+        "mm_name": "whom",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 22,
+        "city_id": 28,
+        "name": "as",
+        "mm_name": "especially",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 23,
+        "city_id": 46,
+        "name": "steam",
+        "mm_name": "certain",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 24,
+        "city_id": 10,
+        "name": "properly",
+        "mm_name": "terrible",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 25,
+        "city_id": 28,
+        "name": "thirty",
+        "mm_name": "bank",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 26,
+        "city_id": 4,
+        "name": "draw",
+        "mm_name": "mine",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 27,
+        "city_id": 42,
+        "name": "meet",
+        "mm_name": "speed",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 28,
+        "city_id": 57,
+        "name": "either",
+        "mm_name": "also",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 29,
+        "city_id": 42,
+        "name": "lake",
+        "mm_name": "soldier",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 30,
+        "city_id": 4,
+        "name": "wise",
+        "mm_name": "lips",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 31,
+        "city_id": 7,
+        "name": "store",
+        "mm_name": "poetry",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 32,
+        "city_id": 59,
+        "name": "aloud",
+        "mm_name": "mix",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 33,
+        "city_id": 51,
+        "name": "frozen",
+        "mm_name": "iron",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 34,
+        "city_id": 45,
+        "name": "strength",
+        "mm_name": "shop",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 35,
+        "city_id": 26,
+        "name": "television",
+        "mm_name": "apart",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 36,
+        "city_id": 3,
+        "name": "toward",
+        "mm_name": "music",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 37,
+        "city_id": 38,
+        "name": "sense",
+        "mm_name": "solution",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 38,
+        "city_id": 46,
+        "name": "electric",
+        "mm_name": "army",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 39,
+        "city_id": 10,
+        "name": "she",
+        "mm_name": "exclaimed",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 40,
+        "city_id": 49,
+        "name": "road",
+        "mm_name": "factory",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 41,
+        "city_id": 16,
+        "name": "per",
+        "mm_name": "doing",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 42,
+        "city_id": 10,
+        "name": "how",
+        "mm_name": "helpful",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 43,
+        "city_id": 15,
+        "name": "stuck",
+        "mm_name": "stick",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 44,
+        "city_id": 2,
+        "name": "out",
+        "mm_name": "stomach",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 45,
+        "city_id": 7,
+        "name": "ability",
+        "mm_name": "bill",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 46,
+        "city_id": 44,
+        "name": "corner",
+        "mm_name": "everything",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 47,
+        "city_id": 45,
+        "name": "built",
+        "mm_name": "bet",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 48,
+        "city_id": 26,
+        "name": "complete",
+        "mm_name": "soft",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 49,
+        "city_id": 56,
+        "name": "rush",
+        "mm_name": "beginning",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 50,
+        "city_id": 31,
+        "name": "wool",
+        "mm_name": "trap",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 51,
+        "city_id": 12,
+        "name": "degree",
+        "mm_name": "aid",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 52,
+        "city_id": 12,
+        "name": "research",
+        "mm_name": "seems",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 53,
+        "city_id": 39,
+        "name": "tent",
+        "mm_name": "park",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 54,
+        "city_id": 40,
+        "name": "fellow",
+        "mm_name": "taste",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 55,
+        "city_id": 28,
+        "name": "subject",
+        "mm_name": "wind",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 56,
+        "city_id": 26,
+        "name": "closely",
+        "mm_name": "coal",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 57,
+        "city_id": 12,
+        "name": "sail",
+        "mm_name": "president",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 58,
+        "city_id": 52,
+        "name": "toward",
+        "mm_name": "whom",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 59,
+        "city_id": 6,
+        "name": "familiar",
+        "mm_name": "bat",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 60,
+        "city_id": 18,
+        "name": "who",
+        "mm_name": "gentle",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 61,
+        "city_id": 20,
+        "name": "stove",
+        "mm_name": "told",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 62,
+        "city_id": 15,
+        "name": "tower",
+        "mm_name": "thousand",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 63,
+        "city_id": 9,
+        "name": "grandmother",
+        "mm_name": "least",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 64,
+        "city_id": 59,
+        "name": "own",
+        "mm_name": "guide",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 65,
+        "city_id": 59,
+        "name": "wrote",
+        "mm_name": "happily",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 66,
+        "city_id": 11,
+        "name": "please",
+        "mm_name": "ever",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 67,
+        "city_id": 11,
+        "name": "search",
+        "mm_name": "hill",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 68,
+        "city_id": 26,
+        "name": "failed",
+        "mm_name": "fox",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 69,
+        "city_id": 60,
+        "name": "principal",
+        "mm_name": "lamp",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 70,
+        "city_id": 37,
+        "name": "regular",
+        "mm_name": "firm",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 71,
+        "city_id": 14,
+        "name": "physical",
+        "mm_name": "not",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 72,
+        "city_id": 2,
+        "name": "nearest",
+        "mm_name": "dear",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 73,
+        "city_id": 40,
+        "name": "powder",
+        "mm_name": "straw",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 74,
+        "city_id": 39,
+        "name": "throughout",
+        "mm_name": "bottom",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 75,
+        "city_id": 21,
+        "name": "kids",
+        "mm_name": "silly",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 76,
+        "city_id": 49,
+        "name": "expression",
+        "mm_name": "disappear",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 77,
+        "city_id": 56,
+        "name": "seems",
+        "mm_name": "ability",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 78,
+        "city_id": 14,
+        "name": "clock",
+        "mm_name": "board",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 79,
+        "city_id": 23,
+        "name": "welcome",
+        "mm_name": "standard",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 80,
+        "city_id": 21,
+        "name": "we",
+        "mm_name": "salmon",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 81,
+        "city_id": 28,
+        "name": "suppose",
+        "mm_name": "know",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 82,
+        "city_id": 5,
+        "name": "nearly",
+        "mm_name": "meal",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 83,
+        "city_id": 39,
+        "name": "unless",
+        "mm_name": "burn",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 84,
+        "city_id": 49,
+        "name": "aid",
+        "mm_name": "case",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 85,
+        "city_id": 57,
+        "name": "exact",
+        "mm_name": "however",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 86,
+        "city_id": 18,
+        "name": "mainly",
+        "mm_name": "body",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 87,
+        "city_id": 45,
+        "name": "happily",
+        "mm_name": "brass",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 88,
+        "city_id": 42,
+        "name": "frog",
+        "mm_name": "exactly",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 89,
+        "city_id": 54,
+        "name": "farm",
+        "mm_name": "protection",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 90,
+        "city_id": 45,
+        "name": "symbol",
+        "mm_name": "gravity",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 91,
+        "city_id": 44,
+        "name": "slipped",
+        "mm_name": "pride",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 92,
+        "city_id": 56,
+        "name": "want",
+        "mm_name": "mother",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 93,
+        "city_id": 22,
+        "name": "high",
+        "mm_name": "correct",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 94,
+        "city_id": 21,
+        "name": "sheet",
+        "mm_name": "stop",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 95,
+        "city_id": 52,
+        "name": "straight",
+        "mm_name": "shelf",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 96,
+        "city_id": 10,
+        "name": "today",
+        "mm_name": "successful",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 97,
+        "city_id": 3,
+        "name": "powder",
+        "mm_name": "whenever",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 98,
+        "city_id": 16,
+        "name": "adult",
+        "mm_name": "away",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 99,
+        "city_id": 18,
+        "name": "eye",
+        "mm_name": "air",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    },
+    {
+        "id": 100,
+        "city_id": 44,
+        "name": "whatever",
+        "mm_name": "collect",
+        "created_at": "2023-01-26 19:04:07",
+        "updated_at": "2023-01-26 19:04:07",
+        "deleted_at": null
+    }
+]
